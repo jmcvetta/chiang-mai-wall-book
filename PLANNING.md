@@ -20,9 +20,19 @@ Proposed readership: curious residents, visitors, and readers of local history. 
 4. Do not give the body of water its own chapters or repetitive section-by-section treatment. Mention it only where necessary to locate or explain a physical structure.
 5. Reference **every factual claim with an endnote**. This includes apparently obvious facts and facts in introductions, captions, maps, tables, timelines, and navigation text.
 6. Prefer “we do not know,” a precisely stated research limit, or omission to an unsupported assertion. Neither narrative flow nor chapter symmetry justifies filling a gap.
-7. Distinguish the history of a place from the age of the material standing there. A documented event at a gate does not date its present bricks.
+7. Make the surviving, visible fabric the primary subject of each chapter. Distinguish the history of a place from the age of the material standing there. A documented event at a gate does not date its present bricks.
 
 This plan does not establish the number, boundaries, dates, or materials of surviving sections. Those are research outputs. Its route is an editorial structure, not a surveyed geometric description.
+
+### Present-day fabric first
+
+Begin with what a reader can identify at the site: a dated photograph, a locator, and a description of the masonry that remains. Research the construction and later treatment of that fabric before expanding into the history of vanished predecessors. Earlier structures belong in the chapter only to explain the surviving work; they must not become its main subject.
+
+Keep three questions separate: when a structure first occupied the site, when the material visible now was put in place, and when that material was subsequently repaired or altered. Do not use the first date as the answer to the second. Distinct surviving phases still receive separate chapters, even where their masonry touches or overlaps.
+
+The owner's North Gate example illustrates this distinction; it does not establish the materials, age, or reconstruction date of that gate. Investigate those questions before making any such claims. If evidence identifies a surviving foundation and a later upper structure, discuss each as its own physical subject under the section rules, rather than letting an account of a vanished gate stand in for either.
+
+“Visible today” means visible in the dated evidence used for the edition, not an undated promise about current conditions. Record the observation date and any obscured or inaccessible fabric. Annotated photographs should show which present-day features each supported historical claim concerns.
 
 ## Scope
 
@@ -96,20 +106,41 @@ A chapter's subject is a distinct physical section belonging to an identifiable 
 - Record small repairs within the relevant chapter unless evidence identifies them as a distinct period-specific section. Size alone does not decide whether a section gets a chapter.
 - Record facing, core, base, and upper work separately where evidence permits. An old material reused in later work does not make the later construction old.
 
-Assign stable section and phase identifiers independently of chapter numbers. Chapter order can change as research improves. Preserve split and merge history so that photographs, notes, and citations do not lose their referents.
+### Stable section names
+
+Use names as section and phase identifiers, not serial numbers, letters, or opaque codes. Names belong to the physical subjects, not to their position in the table of contents. Chapter numbering may change without changing those names.
+
+- Use a verified official name where it identifies the exact subject. Preserve the Thai form and documented language variants in the register.
+- If an official name covers a whole monument containing several chapter subjects, add a clear component qualifier. Do not apply the same unqualified name to several distinct sections.
+- For unnamed remains, use a concise descriptive name built from an established landmark, compass position, feature type, and enough physical detail to distinguish the section.
+- Prefer location and observable geometry over historical interpretation. Avoid “older,” “newer,” dynasty names, or conjectured construction dates in stable names. Keep dating conclusions in the evidence record.
+- Distinguish an editorial descriptive name from an official or historical name. Do not imply that residents or authorities use a name coined for this book.
+- Make names unique within the inventory. If a proposed name fits two subjects, add a meaningful location or component qualifier, not a letter or number.
+
+Illustrative naming proposals only, not an inventory or historical claims:
+
+| Candidate subject | Possible descriptive name |
+| --- | --- |
+| A wall section west of the South Gate, between two adjoining wall sections | South Gate West Middle Wall |
+| A separately identified surviving foundation at the North Gate | North Gate Foundation |
+| Moat retaining masonry west of the South Gate on the city-side bank | South Gate West City-Side Moatwork |
+
+Confirm the landmark and physical relationships before adopting a name. A descriptive name alone does not define an exact boundary: pair it with mapped extent and photographs. For the middle-wall example, its presumed age belongs in the research question, not the name.
+
+Keep adopted names stable when dating or chapter order changes. If new evidence requires a split, merger, or correction, document the naming change and update references; never silently assign an existing name to different masonry. Use the same names in dossiers, maps, and chapters. Filenames and link anchors may use hyphenated words derived from those names, without introducing a second coded section identity.
 
 ## Inventory and field evidence
 
-Make a full circuit inventory before commissioning the complete manuscript. A desk inventory is provisional until its limits are checked against current, dated evidence.
+Make a full provisional circuit inventory before commissioning the complete manuscript. Cover both wall remains and candidate moatworks, recording unexamined areas separately from observed gaps. Use initial source reconnaissance to locate remains, but do not wait for final dating before recording them. Section research can revise the boundaries and chapter subjects. Start from available maps, reports, and dated imagery; this first pass does not require the owner to walk the circuit or perform an expert survey. Keep the limits of remote evidence explicit.
 
 For each candidate section, record:
 
 | Field | Required content |
 | --- | --- |
-| Identity | Stable ID, feature type, verified name and variants |
+| Identity | Stable section name, feature type, official or editorial name status, and documented language variants |
 | Position | Route order, bank or wall side, endpoints or extent, coordinate source and accuracy |
 | Observation | What is visible, observer, date, viewpoint, photograph IDs |
-| Extent | Boundary description, adjacent IDs, overlap or uncertain boundary zone |
+| Extent | Boundary description, adjacent section names, overlap or uncertain boundary zone |
 | Phases | Distinguishable fabric, proposed attribution, supporting source, unresolved alternatives |
 | Condition | Dated description of visible survival, damage, repairs, and obstructions |
 | Evidence | Claim IDs, source IDs, exact locators, photographic or survey support |
@@ -117,7 +148,7 @@ For each candidate section, record:
 | Rights | Image creator, permissions, license, required credit |
 | Status | Candidate, evidence reviewed, chapter-ready, or unresolved |
 
-Photograph the overall setting, both ends, visible faces, junctions, and useful construction details. Keep original files and record camera direction. Show scale only where it can be obtained safely and accurately. Never climb, enter the moat, disturb masonry, or take samples for this project.
+If field photography is undertaken later, photograph the overall setting, both ends, visible faces, junctions, and useful construction details. Keep original files and record camera direction. Show scale only where it can be obtained safely and accurately. Never climb, enter the moat, disturb masonry, or take samples for this project. Missing field observations remain evidence gaps, not obligations imposed on the owner's initial inventory review.
 
 Record moatworks independently from nearby wall sections. Proximity is not evidence of the same construction date. Water level or vegetation may hide masonry; describe what was observable on the survey date without extrapolating below it.
 
@@ -132,7 +163,7 @@ Each factual claim must lead through an endnote to inspected evidence that suppo
 Maintain a claim ledger alongside the manuscript:
 
 - Claim ID and proposed wording.
-- Section or phase ID.
+- Section name and, where needed, a descriptive name for the surviving phase or component.
 - Source ID and exact page, figure, archival identifier, or web heading and passage.
 - Supporting excerpt or a precise evidence description.
 - Original-language wording where translation matters.
@@ -159,7 +190,7 @@ Each note supplies enough information to recover and inspect the evidence:
 
 Missing source metadata stays explicitly missing; never invent a date, author, title, page number, quotation, or DOI. Preserve permitted research copies and record retrieval details. If evidence cannot be shared publicly, give its repository and access conditions without reproducing restricted content.
 
-Factual captions, map labels, measurements, timelines, and tables need notes too. A map can use keyed feature IDs and an adjacent note list; it must still be possible to identify the source of each factual assertion. Illustration credit and factual support are separate obligations.
+Factual captions, map labels, measurements, timelines, and tables need notes too. A map can use section names and an adjacent note list; it must still be possible to identify the source of each factual assertion. Illustration credit and factual support are separate obligations.
 
 Endnotes must appear at the back of every edition, grouped by chapter. Electronic editions must link from claim to note and back. Do not substitute page footnotes, bare hyperlinks, or a bibliography for the requested endnotes.
 
@@ -207,35 +238,146 @@ Where the book states a research limit, attach an endnote describing the reviewe
 
 Use the following organization for every section. Keep it brief where evidence is sparse; do not force content into an empty heading.
 
-1. **Identify the section.** Verified name, stable ID, feature type, location, and supported phase attribution or explicit unknown date. Locator map and current photograph, both sourced.
-2. **What to look at.** Visible extent, material, condition, and diagnostic details. Tie observations to dated photographs or field records. Separate description from interpretation.
-3. **What is known about its history.** A concise narrative supported claim by claim. Distinguish the site's history, the standing fabric, and subsequent interventions.
+1. **Identify the section.** Stable section name, official or editorial name status, feature type, location, and observation date. Locator map and dated identification photograph, both sourced.
+2. **What is visible now.** Visible extent, material, condition, and diagnostic details. Tie observations to dated photographs or field records. Separate description from interpretation.
+3. **The history of this surviving fabric.** Explain the evidenced construction, repair, and reconstruction of what the reader can still see. Identify which visible component each claim concerns, and state when its date is unknown.
 4. **Where it meets other work.** Explain adjoining or overlapping sections, the evidence for separation, and any uncertain boundary. Link to their chapters.
-5. **What remains unknown.** Only consequential questions and conflicts. State why a date or attribution cannot responsibly be given.
-6. **Continue clockwise.** Identify the next section or explain that the next chapter concerns another phase at this same stop. Include factual access directions only when verified and noted.
+5. **What preceded it.** Include only the sourced history of lost structures needed to understand the remains. Keep this subordinate to the surviving fabric; omit it where it adds no necessary explanation.
+6. **What remains unknown.** Only consequential questions and conflicts. State why a date or attribution cannot responsibly be given; do not fill the gap with a plausible story.
+7. **Continue clockwise.** Identify the next section by name or explain that the next chapter concerns another surviving phase at this same stop. Include factual access directions only when verified and noted.
 
 Use the same endnote system throughout, with chapter-specific groups at the back. Do not repeat a generic city history in every chapter. Cross-reference shared context, but do not make a cross-reference substitute for evidence supporting a new claim.
 
-## AI research and editorial workflow
+## Research organization and adversarial review
 
-The editorial owner controls the section register, terminology, route order, and final acceptance. Agents work from that shared record rather than inventing independent inventories.
+The editorial owner controls the section register, names, terminology, route order, and final acceptance. Agents work from that shared record rather than inventing independent inventories.
 
-For each section:
+### Shared research
 
-1. Assemble a research dossier: inspected sources, extracts, image evidence, claim ledger, conflicts, and missing information.
-2. Review the proposed boundaries and phase attribution before drafting a chapter around them.
-3. Draft only from supported claims. Keep endnotes attached during drafting; do not add plausible prose first and hunt for citations later.
-4. Have a separate verification pass reopen the cited evidence and check each factual clause. A second agent's agreement is not corroboration.
-5. Obtain appropriate human review of consequential translations, archaeological interpretation, and visual identification.
-6. Edit for clarity without strengthening certainty or separating a claim from its note. Recheck changed factual wording against the evidence.
+Keep circuit-wide research separate from each section's dossier:
 
-After the shared inventory and source conventions exist, research dossiers can be prepared in parallel. Shared interfaces and overlapping sections still need one editorial decision. Record model and research date internally, and disclose AI generation honestly in the published method note. Human review supplies accountability; it does not make an unsupported claim true.
+- A source register with bibliographic details, inspected passages, languages, translations, access conditions, and source dependencies.
+- A place-name glossary distinguishing official names, historical variants, transliterations, and the book's editorial names.
+- A sourced chronology of construction and interventions, with the geographical extent actually established for each event.
+- A shared collection of maps, dated photographs, conservation records, and rights information.
+
+Store shared evidence once and reference it from the relevant dossiers. A section's dossier must explain why the source applies to that exact surviving fabric. A date for a gate, a stretch of defenses, or a circuit-wide restoration is not automatically a date for every adjacent wall or moatwork.
+
+### Parallel work and agent cost
+
+Design the process as dependent stages with durable handoffs, not as one large agent prompt. Different sections may run concurrently only after the two-section pilot gate passes. Within a single section, the independent discovery, extraction, and review tasks below can already run in parallel during the pilots.
+
+| Stage | Dependencies and parallel work | Default staffing | Handoff |
+| --- | --- | --- | --- |
+| Define the assignment | Reviewed inventory entry, descriptive name, mapped extent, name variants, and explicit identity uncertainties | Section coordinator; escalate ambiguous identity | A bounded research brief, known sources, questions, and required output paths |
+| Discover sources | Thai-language literature, non-Thai literature, and dated visual or archival material can be sought concurrently | Cheaper agents, each handling a coherent search stream rather than one query | Candidate-source records, relevance notes, search logs, access routes, and upstream citations; all remain leads |
+| Retrieve and extract | Start a source-specific batch when an accessible candidate is available; other discovery streams need not finish first | Cheaper agents for routine retrieval, metadata, transcription, and exact-passage extraction | Inspected evidence with locators, original text, translation status, component and date scope, access limits, and source lineage |
+| Reconcile and synthesize | Requires the relevant evidence batches and an explicit record of missing sources; conflicting identifications cannot be silently merged | A more capable section researcher | Assessed claim ledger and a source-linked research history, including disagreements and unknowns |
+| Edit into a chapter | Requires the research history, claim ledger, and standard chapter structure | A writer/editor chosen for synthesis quality | A concise visible-fabric-first chapter, preserving each retained claim's evidence links |
+| Check and challenge | On a fixed chapter revision, run mechanical citation checks and independent evidence-review bundles concurrently | Cheap checks for missing links or locators; cheaper reviewers for straightforward source comparisons; more capable reviewers for interpretation | Coverage report and claim-level adversarial findings with exact evidence |
+| Reconcile the review | Requires all review outputs and the full chapter, not merely their summaries | An independent section-level reviewer, with specialist human escalation where needed | Cross-claim chronology and spatial consistency review, resolved objections, and an acceptance or revision decision |
+
+Cheaper agents collect and organize evidence; they do not gain authority to settle an ambiguous date, translation, physical identity, or phase boundary. Route difficult handwriting, consequential translation ambiguity, conflicting accounts, and archaeological interpretation to a suitably capable reviewer or competent human. Keep the claim out of the factual narrative if that escalation cannot resolve it.
+
+Mechanical checks can find a dangling note or missing source field. They cannot prove that a citation supports a claim or that every factual assertion has been recognized. Retain the substantive adversarial review, including captions and explanatory footnotes.
+
+Batch related claims sharing a source or attribution for review. Independent batches may run concurrently, but one reviewer must subsequently inspect the whole section for contradictions, misapplied dates, and false corroboration across batches. Neither parallel review nor agent consensus replaces that reconciliation.
+
+Keep one owner for canonical shared-source records and section boundaries. Workers propose additions in separate artifacts; the owner deduplicates and integrates them. Several websites repeating one report remain one evidentiary lineage, not several independent witnesses.
+
+Reuse inspected source records and completed extraction across sections. Re-run changed claims and their evidence dependencies, not unrelated acquisition tasks. Recheck whole-section consistency whenever an identification, boundary, date, or source interpretation changes. Pilot repetitions still exercise the entire workflow; reuse must not become automatic acceptance of earlier conclusions.
+
+Agree a search scope and stopping point for each assignment, record what was searched and what remains inaccessible, and avoid claiming an exhaustive literature search merely because a worker finished. Limit active workers and batch small tasks. Record the model used, failed handoffs, and cost where available during the pilots; choose the least expensive agent that meets the demonstrated quality requirement. Do not reduce the evidence standard to meet a cost target.
+
+### Git-tracked research staging
+
+Commit intermediate research artifacts, not only polished chapters. Each stage must leave enough information for another agent or a later session to continue without relying on the original conversation. Staging content is research material, not automatically accepted book content.
+
+Proposed organization, to be exercised and refined during the pilots:
+
+```text
+research/
+  shared/
+    sources/
+    chronology.md
+    names.md
+  materials/
+  sections/
+    <descriptive-section-name>/
+      discovery-thai.md
+      discovery-other-languages.md
+      discovery-images-and-maps.md
+      evidence.md
+      research-history.md
+      claims.md
+      review.md
+      runs.md
+book/
+  chapters/
+```
+
+This describes the intended artifacts; it is not a requirement to create empty files or implement a research application. Section directory names use descriptive words. The source register can retain bibliographic keys; those are not coded section names.
+
+- **Discovery records** collect academic articles and other candidate sources, including titles, authors, language, publication details, DOI or catalog reference where available, access links, relevance, and citations to earlier sources. Distinguish “found a reference” from “obtained the source” and “inspected the relevant passage.” A paywalled or unavailable paper stays a lead until inspected.
+- **Evidence records** connect exact passages, figures, or dated images to the physical subject. Preserve original-language text where legally shareable, translation status, locators, source limits, and source-dependency relationships. Do not substitute an agent's summary for the underlying evidence.
+- **Research histories** may be long and detailed. Let a researcher assemble the fullest useful source-linked account before an editor selects and structures the chapter. Include the relevant history of predecessors here without allowing it to dominate the final chapter. Mark candidate claims, disagreements, rejected claims, and unresolved questions explicitly; “unreviewed” is not permission to fabricate details.
+- **Claim and review records** retain the support for each proposed assertion, the adversarial objections, and their dispositions. Preserve material removed from the chapter when it has research value. An agent-written history is never an independent source for another agent to cite.
+- **Run records** identify the process version, input artifact revisions, output paths, agent or reviewer roles and models, outstanding work, procedural defects, and the changes made between attempts.
+
+Each handoff names the section or source, its stage and review status, the exact supporting sources and locators, missing inputs, and the next action. Keep source-access status separate from claim-support status: a downloaded paper does not make an extracted interpretation correct.
+
+Give concurrent workers separate output files or source bundles. One integration owner commits coherent handoffs after checking scope and public-release suitability, rather than letting agents race to edit the same ledger or Git index. Record the handoff's commit and paths in subsequent assignments. Preserve failed runs and rejected claims through Git history and explicit review records; do not silently replace them with a cleaner story.
+
+### Public staging and source rights
+
+This repository is public. A staging directory does not make its contents private or prevent an unreviewed draft from being read. Label intermediate narratives prominently as unreviewed research, and publish the book only from the explicit approved chapter list. Never discover publication inputs by recursively including every Markdown file.
+
+Article metadata and access links belong in the shared register. Commit full papers, scans, photographs, or substantial excerpts only after confirming that redistribution is permitted. Open access, a library download, or finding a PDF online does not by itself establish permission. Record the rights basis and required credit for material placed in `research/materials/`.
+
+Keep restricted copies outside the public repository; do not commit them and remove them later, because they would remain in Git history. Public records should retain bibliographic details, lawful notes, exact locators, and access conditions without credentials, private correspondence, or restricted content. Later researchers may need their own authorized access. The final book build must not depend on those restricted copies.
+
+### Per-section research process
+
+1. **Confirm identity.** Establish that the names, photographs, maps, and written accounts concern the same physical subject. Record uncertainty rather than joining records on a similar name alone.
+2. **Document the visible fabric.** Establish the observation date, extent, components, and interfaces. Separate what is directly visible from interpretations of age or function.
+3. **Gather historical evidence.** Seek Thai and non-Thai sources for the standing work and its interventions. Record exact passages and source dependencies. Research vanished predecessors only as necessary context.
+4. **Assess phases and boundaries.** Connect each attribution to a visible component. Revise the provisional inventory where evidence supports a split or merger; preserve uncertainty where it does not.
+5. **Prepare the dossier and claim ledger.** Record supported claims, conflicts, source limits, and unanswered questions. An inference generated by an agent remains a research lead, not a publishable fact.
+6. **Build the research history, then edit.** Commit a detailed source-linked account in staging before honing it into the standard chapter. Preserve the claim ledger and endnotes through that reduction. Do not add plausible prose and search for citations afterwards.
+7. **Run adversarial review and resolve objections.** Follow the review protocol below on the chapter, with access to the fuller history, claim ledger, and original evidence. Stage the review findings and resolutions.
+8. **Edit and recheck.** Review changed factual wording, captions, notes, maps, and cross-references against the evidence. Reopen affected review findings when wording or evidence changes, and commit the accepted handoff.
+
+Parallel work within one section is part of the process to be tested in the pilots. Do not fan out research across the remaining sections until the owner has accepted the inventory's plausibility, the repeated first-section pilot, and the second-section validation described below. Shared interfaces and overlapping sections still need one editorial decision. Record model and research date internally, and disclose AI generation honestly in the published method note.
+
+### Adversarial review protocol
+
+Give a reviewer other than the drafter the chapter, claim ledger, cited evidence, and relevant shared records. The reviewer's task is to find reasons that a statement could mislead or be wrong, not to approve an attractive narrative. Require a claim-by-claim review, not a sample or a general impression.
+
+For each factual statement, the reviewer must:
+
+- Reopen the cited evidence and check the exact wording and locator. A reference's existence is not proof that it supports the claim.
+- Check that it concerns this structure, this component, and the relevant date. Challenge the transfer of a site's founding date or a predecessor's history to present-day masonry.
+- Check dates, calendar conversions, names, translations, quotations, measurements, and map interpretation where they affect the claim.
+- Separate dated observation, a source's assertion, and scholarly interpretation. Challenge wording that presents one as another or makes a source more certain than it is.
+- Check apparent corroboration for common-source copying or translations of the same work.
+- Seek contrary evidence for consequential identifications, dating, phase boundaries, and restoration attributions. Record the search and its limits; failure to find a contradiction does not establish truth.
+- Apply the same scrutiny to captions, diagrams, map labels, tables, and factual statements inside explanatory footnotes.
+
+Each objection must identify the claim and manuscript location, the evidence and exact locator, the problem, and what would resolve it: narrower wording, additional evidence, a corrected attribution, or removal. A reviewer who suspects an error but cannot establish it must label the objection unresolved rather than invent a rebuttal.
+
+The drafter responds with evidence, not confidence or a majority vote among agents. The reviewer rechecks the response. Obtain competent human review for consequential translations or archaeological interpretations that cannot be resolved from the inspected evidence. Human or agent agreement alone is not corroboration.
+
+Use explicit dispositions: **supported as written**, **supported only with narrower wording**, **omit**, or **unresolved—do not publish as fact**. Accept a chapter only when no unresolved support objection remains attached to a retained factual claim. When an objection cannot be resolved, omit the assertion or replace it with a precisely scoped, endnoted statement of what the investigation has not established. Do not retain a guess by adding “probably,” “perhaps,” or a speculative footnote.
+
+Prefer silence to a potentially incorrect assertion. Do not require a minimum claim count or chapter length. Keep rejected claims and their evidence in the research record so that later agents do not reintroduce them without new support.
+
+Review reduces risk; it cannot certify historical infallibility. Keep evidence traceable and provide a corrections route. No claim becomes more reliable merely because several agents repeat it.
 
 ## Single-source publishing approach
 
 **Working recommendation: semantic Pandoc Markdown for the manuscript, with Typst as the first PDF-engine candidate.** Keep this provisional until the two-note-system publishing trial passes. Pandoc documents Markdown, HTML, EPUB, and Typst support, including Typst as a PDF engine.[1][2]
 
-Use existing publishing tools. Do not build a custom authoring application, CMS, or research database. Keep the section register and claim ledger in simple structured files. Keep source IDs, chapter IDs, figure IDs, and both types of note IDs stable.
+Use existing publishing tools. Do not build a custom authoring application, CMS, or research database. Keep the section register and claim ledger in simple structured files. Use stable descriptive names for section and chapter identities; keep source IDs, figure IDs, and both types of note IDs stable.
 
 ### Typst assessment
 
@@ -360,33 +502,59 @@ KDP currently requires disclosure of AI-generated text, images, and translations
 
 ## Work sequence and acceptance gates
 
-### 1. Establish the research foundation
+### 1. Make the first inventory pass
 
-Locate authoritative source collections, create the source register, and make a provisional full-circuit inventory. Identify missing coverage and fieldwork needs. Keep the chapter count open.
+Locate authoritative source collections, begin the shared source register, and make a provisional full-circuit inventory from available evidence. Keep the chapter count open. Record which stretches were inspected remotely, where evidence is missing, and where boundaries or survival remain uncertain.
 
-Acceptance: candidate remains can be located; wall and moatworks are separate records; observed boundaries are not presented as established periods; every source status is explicit; Thai and non-Thai searches and source dependencies are recorded.
+Deliver a route map and a concise clockwise list of named candidate sections, with identification images or source links where available. Make wall and moatwork records distinguishable. Present uncertainty visibly rather than hiding it in detailed research notes.
 
-### 2. Prove the method near the starting point
+Acceptance: candidate remains can be located by stable names and mapped extents; official and editorial names are distinguished; observed boundaries are not presented as established periods; coverage gaps and source status are explicit. This is an initial inventory, not a claim that every historical phase has already been identified.
 
-Research the North Gate opening group and the next identifiable section clockwise. Include a mixed-phase interface if one is evidenced. Include a moatwork sample if surviving masonry can be identified; otherwise record the evidence gap rather than inventing one.
+### 2. Obtain the owner's inventory smell test
 
-Acceptance: the chapter template works for the available evidence; every factual statement has a verified endnote; unsupported dates remain unknown; section and phase boundaries are reviewable.
+Pause for the owner's quick review of the inventory. The owner is not acting as a historian or archaeologist and is not expected to walk the wall or verify it against the site at this stage.
 
-### 3. Prove the publishing format
+Ask whether the list and map look broadly sensible: recognizable places, intelligible names, a coherent route, apparent duplicates, obvious omissions, or implausible divisions. Resolve concerns and return the revised inventory for review as needed.
 
-Render the sample material as PDF, EPUB, and HTML before expanding the manuscript. Exercise a photograph, locator map, Thai name, cross-reference, paired-language reference endnote, explanatory footnote, and a reference endnote cited from inside that footnote. Use real sourced material, not invented history to fill a demonstration.
+Acceptance: the owner considers the provisional inventory plausible enough to begin a pilot. Record this as a workflow approval, not as historical evidence or certification of completeness. Do not cite the smell test as support for a claim in the book.
 
-Acceptance: validate EPUB structure and inspect it in Kindle Previewer; open the PDF and HTML; verify both note systems, return links, reading order, font rendering, image legibility, and offline usability. Render two distinct designs without changing chapter files. Exercise the HTML download links against the generated artifacts, check asset sizes, and verify Umami behavior with an isolated test collector. Record unavailable device coverage rather than claiming universal compatibility.
+### 3. Iterate the complete process on one section
 
-### 4. Complete the circuit
+Choose one named candidate section from the reviewed inventory. Run the entire section process: evidence gathering, claim ledger, phase assessment, chapter draft, adversarial review, and resolution of findings. Exercise the planned parallel tasks within this single section rather than substituting a bespoke manual process that cannot later be reused.
 
-Finish the inventory and section dossiers, then draft chapters in route order. Seek specialist review where the evidence calls for it. Revise shared boundaries centrally.
+Review the results with the owner. Expect defects in the process: unclear assignments, missing evidence, weak source matching, unreliable translation, false corroboration, or review that fails to challenge a plausible story. Correct the process, then run it again on the same section. Do not move to another section merely because the first result is difficult or sparse.
+
+For each run, retain the process version, evidence inputs, outputs, review findings, and changes made to the procedure. Reuse inspected source records where appropriate, but do not carry forward an earlier approval as proof that changed claims are sound. Judge improvement by traceability, accuracy, treatment of unknowns, and readability, not by the quantity of prose.
+
+Acceptance: the owner is satisfied with the results and the process is ready to try elsewhere. Every retained factual statement passes the evidence and adversarial-review requirements. A short result with explicit unknowns can pass; invented completeness cannot.
+
+### 4. Validate on one additional section
+
+Apply the refined process to a second named section. Choose a subject that usefully tests transfer, such as a different feature type or interface, where the inventory permits. Do not require a third pilot or substitute a batch for this second test.
+
+If the second section exposes a process defect, fix it and repeat the affected work there. Recheck the first section where that change affects its evidence or conclusions. Do not scale merely because the first section eventually looked good.
+
+Acceptance: the second section gives results the owner considers satisfactory under the same evidence and adversarial-review standard. Record the approved process version for wider use. Two successful pilots justify scaling the workflow; they do not prove future chapters correct.
+
+### 5. Research the remaining sections in parallel
+
+Only after the second-section validation succeeds, apply the approved process across the remaining inventory. Research can run concurrently both across sections and within each section's independent tasks. Use bounded concurrency and batch small tasks rather than opening an agent for every item.
+
+Keep one owner for shared names, source records, boundaries, and interface decisions. Assemble accepted chapters in clockwise order even if research finishes in a different order. Every section retains its own adversarial review; the pilots do not exempt later work. If a shared procedural defect appears, pause the affected work, correct the procedure, and revisit affected results before continuing.
 
 Acceptance: every inventoried extant section has a chapter or an explicit unresolved treatment; every distinct evidenced period-specific section has its own chapter; survey gaps are disclosed. No section is silently omitted because it is less picturesque or less well documented.
 
-### 5. Audit and publish
+### 6. Prove the publishing format
 
-Audit every factual claim against its endnote and underlying evidence. Check captions and maps as strictly as prose. Resolve rights, book metadata, accessibility, and output checks. Publish editions from the same approved source revision, with a survey cutoff, edition date, and corrections route.
+Use accepted pilot material to test the publishing format before producing all final editions. This trial can proceed alongside later research; it does not replace either research pilot or delay their evidence review.
+
+Render the sample material as PDF, EPUB, and HTML. Exercise a photograph, locator map, Thai name, cross-reference, paired-language reference endnote where supported, explanatory footnote, and a reference endnote cited from inside that footnote. Use real sourced material, not invented history to fill a demonstration.
+
+Acceptance: validate EPUB structure and inspect it in Kindle Previewer; open the PDF and HTML; verify both note systems, return links, reading order, font rendering, image legibility, and offline usability. Render two distinct designs without changing chapter files. Exercise the HTML download links against the generated artifacts, check asset sizes, and verify Umami behavior with an isolated test collector. Record unavailable device coverage rather than claiming universal compatibility.
+
+### 7. Audit and publish
+
+Apply the adversarial evidence review to every factual claim and its endnote. Check captions and maps as strictly as prose. Remove or narrow claims with unresolved support objections before publication. Resolve rights, book metadata, accessibility, and output checks. Publish editions from the same approved source revision, with a survey cutoff, edition date, and corrections route.
 
 Acceptance: no unsupported factual claim remains; unresolved history is marked or omitted; all editions carry the same factual content and distinct, usable note systems; the public source can reproduce them; download links identify matching editions; permissions, analytics notice, and required disclosures are complete.
 
