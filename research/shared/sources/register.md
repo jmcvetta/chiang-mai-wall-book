@@ -43,6 +43,7 @@ Worker discovery logs, with fuller search scope and the leads not followed, are 
 - Access: inspected. The service's metadata gives, at all nine stops: `DATE (YYYYMMDD)` 20260110, `RESOLUTION (M)` 0.31, `ACCURACY (M)` 8.47.
 - Observation date: 2026-01-10, as stated in the service metadata. This is the date of the image, not the retrieval date.
 - Use in this inventory: plan-view reading of each stop and each reach by the coordinating agent (an AI model), not by a human observer. A plan view cannot show a vertical moat bank face.
+- Second read, 2026-10-08 (issue #23): zoom-19 tiles from `https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/19/{y}/{x}`, retrieved 17:12–17:14 UTC, read segment by segment along every wall outline at the nine stops. Tile indices per stop are in `research/inventory/evidence.md` (entries I1–I11). The `identify` metadata, queried again the same day at a point in each stop, gave 1/10/2026, 0.31 m, 8.47 m. The tiles carry no date of their own; that they show the 2026-01-10 image is an inference from that metadata. Viewed, not stored.
 - Rights: not cleared for reproduction. No image from this service is stored in the repository.
 
 ### commons-linge-2017
@@ -55,11 +56,38 @@ Files used in the inventory (Verification: extractor, for date and description; 
 | --- | --- | --- | --- | --- | --- |
 | commons-linge-20170329-1201a | [201703291201a P Chiang Mai, City Wall and Moat.jpg](https://commons.wikimedia.org/wiki/File:201703291201a_P_Chiang_Mai,_City_Wall_and_Moat.jpg) | 2017-03-29 12:01:21 | "City moat of Chiang Mai between Hua Rin Corner and Chang Phuak Gate" | 18.795553, 98.982733 | yes |
 | commons-linge-20170329-1029a | [201703291029a Chiang Mai, City Moat.jpg](https://commons.wikimedia.org/wiki/File:201703291029a_Chiang_Mai,_City_Moat.jpg) | 2017-03-29 10:29:27 | "City moat of Chiang Mai between Chiang Mai Gate and Suan Prung Gate" | not stated | yes |
-| commons-linge-20170329-1143a | [201703291143a P Chiang Mai, City Moat.jpg](https://commons.wikimedia.org/wiki/File:201703291143a_P_Chiang_Mai,_City_Moat.jpg) | 2017-03-29 11:43:03 | "City moat of Chiang Mai between Chang Phuak Gate and Sri Phum Corner" | 18.795245, 98.991489 | no (download rate-limited) |
-| commons-linge-20170329-1126a | [201703291126a Chiang Mai, City Moat.jpg](https://commons.wikimedia.org/wiki/File:201703291126a_Chiang_Mai,_City_Moat.jpg) | 2017-03-29 11:26:16 | "City moat of Chiang Mai between Sri Phum Corner and Tha Phae Gate" | not stated | no |
-| commons-linge-20170329-1223c | [201703291223c Chiang Mai, City Moat.jpg](https://commons.wikimedia.org/wiki/File:201703291223c_Chiang_Mai,_City_Moat.jpg) | 2017-03-29 12:23:39 | "City moat of Chiang Mai between Suan Dok Gate and Hua Rin Corner" | not stated | no |
+| commons-linge-20170329-1143a | [201703291143a P Chiang Mai, City Moat.jpg](https://commons.wikimedia.org/wiki/File:201703291143a_P_Chiang_Mai,_City_Moat.jpg) | 2017-03-29 11:43:03 | "City moat of Chiang Mai between Chang Phuak Gate and Sri Phum Corner" | 18.795245, 98.991489 | no: download rate-limited (issue #3); HTTP 429 again 2026-10-08 |
+| commons-linge-20170329-1126a | [201703291126a Chiang Mai, City Moat.jpg](https://commons.wikimedia.org/wiki/File:201703291126a_Chiang_Mai,_City_Moat.jpg) | 2017-03-29 11:26:16 | "City moat of Chiang Mai between Sri Phum Corner and Tha Phae Gate" | not stated | no: HTTP 429, 2026-10-08 |
+| commons-linge-20170329-1223c | [201703291223c Chiang Mai, City Moat.jpg](https://commons.wikimedia.org/wiki/File:201703291223c_Chiang_Mai,_City_Moat.jpg) | 2017-03-29 12:23:39 | "City moat of Chiang Mai between Suan Dok Gate and Hua Rin Corner" | not stated | no: HTTP 429, 2026-10-08 |
 
-Gate and corner files from the same series, one per stop, are listed with dates and rights in `research/inventory/discovery/discovery-images-and-maps.md`. They were not viewed in this pass.
+Gate and corner files from the same series, one per stop, are listed with dates and rights in `research/inventory/discovery/discovery-images-and-maps.md`. Their status after the issue #23 pass (2026-10-08): each file page loaded (HTTP 200); each image request to `upload.wikimedia.org` returned HTTP 429 with `retry-after: 600`. Each 429 is recorded as a failed fetch in `research/inventory/evidence.md`.
+
+| File | Stop | Image viewed |
+| --- | --- | --- |
+| [201703291151b P Chiang Mai, City Wall, Chang Phuak Gate.jpg](https://commons.wikimedia.org/wiki/File:201703291151b_P_Chiang_Mai,_City_Wall,_Chang_Phuak_Gate.jpg) | Chang Phueak Gate | no: HTTP 429, 2026-10-08 |
+| [Ancient city wall and Chang Phueak Gate in Chiang Mai.jpg](https://commons.wikimedia.org/wiki/File:Ancient_city_wall_and_Chang_Phueak_Gate_in_Chiang_Mai.jpg) (not in the Linge series) | Chang Phueak Gate | no: HTTP 429, 2026-10-08 |
+| [Category:Si Phum Corner](https://commons.wikimedia.org/wiki/Category:Si_Phum_Corner) | Chaeng Si Phum | no: category not opened; image requests were rate-limited |
+| [201703291114c Chiang Mai, City Wall, Tha Phae Gate.jpg](https://commons.wikimedia.org/wiki/File:201703291114c_Chiang_Mai,_City_Wall,_Tha_Phae_Gate.jpg) | Tha Phae Gate | no: HTTP 429, 2026-10-08 |
+| [20171105 Tha Phae Gate Chiang Mai 9784 DxO.jpg](https://commons.wikimedia.org/wiki/File:20171105_Tha_Phae_Gate_Chiang_Mai_9784_DxO.jpg) (not in the Linge series) | Tha Phae Gate | no: HTTP 429, 2026-10-08 |
+| [201703291051a Chiang Mai, City Wall, Katam Corner.jpg](https://commons.wikimedia.org/wiki/File:201703291051a_Chiang_Mai,_City_Wall,_Katam_Corner.jpg) | Chaeng Katam | no: HTTP 429, 2026-10-08 |
+| [201703291042a Chiang Mai, City Wall, Chiang Mai Gate.jpg](https://commons.wikimedia.org/wiki/File:201703291042a_Chiang_Mai,_City_Wall,_Chiang_Mai_Gate.jpg) | Chiang Mai Gate | no: HTTP 429, 2026-10-08 |
+| [201703281525c Chiang Mai, City Wall, Suan Prung Gate.jpg](https://commons.wikimedia.org/wiki/File:201703281525c_Chiang_Mai,_City_Wall,_Suan_Prung_Gate.jpg) | Saen Pung Gate | no: HTTP 429, 2026-10-08 |
+| [201703281534c P Chiang Mai, City Moat, Ku Ruang Corner.jpg](https://commons.wikimedia.org/wiki/File:201703281534c_P_Chiang_Mai,_City_Moat,_Ku_Ruang_Corner.jpg) | Chaeng Ku Hueang | no: HTTP 429, 2026-10-08 |
+| [201703291225a P Chiang Mai, City Wall, Saun Dok Gate.jpg](https://commons.wikimedia.org/wiki/File:201703291225a_P_Chiang_Mai,_City_Wall,_Saun_Dok_Gate.jpg) | Suan Dok Gate | no: HTTP 429, 2026-10-08 |
+| [201703291209c Chiang Mai, City Wall, Hua Lin Corner.jpg](https://commons.wikimedia.org/wiki/File:201703291209c_Chiang_Mai,_City_Wall,_Hua_Lin_Corner.jpg) | Chaeng Hua Lin | no: HTTP 429, 2026-10-08 (three attempts) |
+
+### owner-2026-10-08
+
+Owner observations and photographs, recorded for issue #23. Owner input is workflow input. It is not specialist review and not historical evidence; "older", "newer" and "restored" in it are the owner's words, not sourced claims. Entries O1–O4 in `research/inventory/evidence.md`.
+
+| Key | What | Observation date | Locator | Access |
+| --- | --- | --- | --- | --- |
+| owner-obs-2026-10-08-issue4-a | Owner finding: each Chang Phueak wing has two visibly different sections, possibly three | 2026-10-08 | [#4 comment](https://github.com/jmcvetta/chiang-mai-wall-book/issues/4#issuecomment-6064637049) (relayed from chat) | inspected |
+| owner-obs-2026-10-08-issue4-b | Owner reading of a zoom-19 Esri crop of the west wing | 2026-10-08 | [#4 comment](https://github.com/jmcvetta/chiang-mai-wall-book/issues/4#issuecomment-6064700401) | inspected |
+| owner-photo-2026-10-08-cp-east-1 | Photograph, Chang Phueak east wing from the south | 2026-10-08 23:52:48 local (EXIF) | `research/materials/owner-photos/2026-10-08-chang-phueak-east-wing-border-1.jpg` | viewed 2026-10-08 |
+| owner-photo-2026-10-08-cp-east-2 | Photograph, the join between the crenellated block and the low run | 2026-10-08 23:52:54 local (EXIF) | `research/materials/owner-photos/2026-10-08-chang-phueak-east-wing-border-2.jpg` | viewed 2026-10-08 |
+
+Rights for the two photographs: see `research/materials/RIGHTS.md`.
 
 ---
 

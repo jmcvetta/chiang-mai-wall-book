@@ -7,4 +7,4 @@
 - Owner's statement: this is the north-east side of the gate, at the section border.
 - Subject: the east wing of Chang Phueak Gate (OSM way 97191493). At the left, beside the gate opening, a tall rectilinear block of evenly coursed brick with crenellations; a large tree stands over it. To the right, running east, a low, ragged, stepped pile of brick with no continuous coursing, fronted by a red "Please do not climb on the historical ruins" sign. The join is in frame in photograph 2, just east of the crenellated block's corner.
 - Status: owner observation. Not specialist review and not a dating claim. Recorded for issue #23.
-- Handed over by the orchestrating session; not yet integrated into `research/inventory/` or the source register. Integration is #23's.
+- Handed over by the orchestrating session. Integrated for issue #23 into `research/inventory/evidence.md` (O3, O4), `research/inventory/inventory.md` (Chang Phueak Gate records 1c, 1d) and the source register (`owner-2026-10-08`).
