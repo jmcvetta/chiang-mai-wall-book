@@ -5,7 +5,7 @@ status:         draft
 input revision: master 0c91685bd4188b294aada082dc2d95a06033c75e; owner photographs 39c8cb7 (merged into this branch)
 outputs:        research/inventory/evidence.md
 sources used:   esri-world-imagery-wv3-2026-01-10 (zoom-19 tiles listed per entry); owner-photo-2026-10-08-cp-east-1, owner-photo-2026-10-08-cp-east-2; owner-obs-2026-10-08-issue4-a, owner-obs-2026-10-08-issue4-b; osm-api-2026-10-08
-missing inputs: every Wikimedia Commons photograph listed for the nine stops (HTTP 429 on every image request; see "Failed fetches"); human dated observations of eight of the nine stops
+missing inputs: every Wikimedia Commons photograph listed for the nine stops (HTTP 429 on every image request; see "Commons photographs: fetch record"); human dated observations of eight of the nine stops
 next recipient: editorial owner
 next action:    check the Chang Phueak Gate split against what you see on the ground (handoff.md, question 1)
 ```
@@ -29,7 +29,7 @@ Nothing here dates any fabric. "Ragged" and "square" describe what the image sho
 
 ### Dated photographs
 
-- Every Wikimedia Commons file page listed in the inventory records was fetched (HTTP 200). Every request for the image itself, at `upload.wikimedia.org`, returned HTTP 429 with `retry-after: 600`. See "Failed fetches". No Commons photograph was viewed in this run.
+- Every Wikimedia Commons file page listed in the inventory records was fetched (HTTP 200). Every request for the image itself, at `upload.wikimedia.org`, returned HTTP 429 with `retry-after: 600`. The Si Phum Corner category page was not fetched: with every image request refused, its 24 files could not have been viewed. See "Commons photographs: fetch record". No Commons photograph was viewed in this run.
 - The two owner photographs (39c8cb7) were viewed.
 - Search for drone or elevated photographs: see "Photograph search".
 
@@ -223,7 +223,7 @@ All listed in the inventory records or found by the photograph search. File page
 | 201703291143a P Chiang Mai, City Moat.jpg | reach 1–2 | 200 | 429 | 17:20 |
 | 201703291126a Chiang Mai, City Moat.jpg | reach 2–3 | 200 | 429 | 17:20 |
 | 201703291223c Chiang Mai, City Moat.jpg | reach 8–9 | 200 | 429 | 17:20 |
-| Category:Si Phum Corner (24 files) | 2 | not fetched | not fetched | — |
+| Category:Si Phum Corner (24 files) | 2 | not fetched | not fetched | — (skipped: every image request was being refused) |
 
 A Commons API `imageinfo` query for the same files at 17:16 also returned 429.
 

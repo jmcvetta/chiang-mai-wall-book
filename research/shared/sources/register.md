@@ -66,7 +66,7 @@ Gate and corner files from the same series, one per stop, are listed with dates 
 | --- | --- | --- |
 | [201703291151b P Chiang Mai, City Wall, Chang Phuak Gate.jpg](https://commons.wikimedia.org/wiki/File:201703291151b_P_Chiang_Mai,_City_Wall,_Chang_Phuak_Gate.jpg) | Chang Phueak Gate | no: HTTP 429, 2026-10-08 |
 | [Ancient city wall and Chang Phueak Gate in Chiang Mai.jpg](https://commons.wikimedia.org/wiki/File:Ancient_city_wall_and_Chang_Phueak_Gate_in_Chiang_Mai.jpg) (not in the Linge series) | Chang Phueak Gate | no: HTTP 429, 2026-10-08 |
-| [Category:Si Phum Corner](https://commons.wikimedia.org/wiki/Category:Si_Phum_Corner) | Chaeng Si Phum | no: category not opened; image requests were rate-limited |
+| [Category:Si Phum Corner](https://commons.wikimedia.org/wiki/Category:Si_Phum_Corner) | Chaeng Si Phum | no: category page not fetched, because every image request was being refused (HTTP 429), so its files could not have been viewed |
 | [201703291114c Chiang Mai, City Wall, Tha Phae Gate.jpg](https://commons.wikimedia.org/wiki/File:201703291114c_Chiang_Mai,_City_Wall,_Tha_Phae_Gate.jpg) | Tha Phae Gate | no: HTTP 429, 2026-10-08 |
 | [20171105 Tha Phae Gate Chiang Mai 9784 DxO.jpg](https://commons.wikimedia.org/wiki/File:20171105_Tha_Phae_Gate_Chiang_Mai_9784_DxO.jpg) (not in the Linge series) | Tha Phae Gate | no: HTTP 429, 2026-10-08 |
 | [201703291051a Chiang Mai, City Wall, Katam Corner.jpg](https://commons.wikimedia.org/wiki/File:201703291051a_Chiang_Mai,_City_Wall,_Katam_Corner.jpg) | Chaeng Katam | no: HTTP 429, 2026-10-08 |

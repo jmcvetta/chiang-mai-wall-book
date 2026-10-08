@@ -22,23 +22,25 @@ OUT = HERE / "inventory-map.svg"
 WIDTH, HEIGHT, MARGIN = 1520, 1260, 120
 THAI = "Noto Sans Thai, Loma, Tahoma, Leelawadee UI, sans-serif"
 WALL = "#7a2e14"
-# Fills that tell the parts of a split record apart. Index is the part's
-# position in its parent's list of children.
-SPLIT_FILLS = ["#d9822b", "#3b1407", "#e8b04a", "#7d3a8c"]
+# Fills that tell the parts of a split record apart, in route_ref order within
+# the parent. Each contrasts with WALL, so a split reads as split at stop scale.
+SPLIT_FILLS = ["#d9822b", "#2f7d6d", "#e8c34a", "#7d3a8c"]
 
-# Label placement for each stop, keyed by route order: (dx, dy, anchor).
+# Label placement for each stop, keyed by route order: (dx, dy, anchor). A stop
+# not listed gets DEFAULT_LABEL.
+DEFAULT_LABEL = (0, 40, "middle")
 LABEL = {
     1: (0, -38, "middle"), 2: (14, -24, "start"), 3: (24, 4, "start"),
     4: (14, 34, "start"), 5: (0, 40, "middle"), 6: (0, 40, "middle"),
     7: (0, 44, "middle"), 8: (-26, 4, "end"), 9: (-14, -30, "end"),
 }
 
-# Insets that show split records at large scale: parent name, top-left corner
-# on the page, and scale in pixels per metre.
-INSETS = [
-    ("Chang Phueak Gate", (200, 735), 3.6),
-    ("Chaeng Ku Hueang", (740, 735), 3.2),
-]
+# Inset slots for split records, filled in route order: top-left corner on the
+# page and the largest scale allowed, in pixels per metre. A slot's scale shrinks
+# so the inset fits INSET_MAX_SIZE.
+INSET_SLOTS = [(200, 735), (740, 735)]
+INSET_MAX_PPM = 3.6
+INSET_MAX_SIZE = (500, 200)
 
 KX = 111320 * math.cos(math.radians(18.79))  # metres per degree of longitude
 KY = 110574  # metres per degree of latitude
@@ -67,6 +69,23 @@ def text(x, y, s, size, *, weight=None, anchor="start", family=None, style=None)
     return f"<text {attrs}>{escape(s)}</text>"
 
 
+def projector(points, scale, left, top):
+    """Return a function mapping lon/lat to page x/y, with the points' north-west corner at left, top."""
+    lon0 = min(c[0] for c in points)
+    lat1 = max(c[1] for c in points)
+
+    def project(lon, lat):
+        return left + (lon - lon0) * KX * scale, top + (lat1 - lat) * KY * scale
+
+    return project
+
+
+def extent_m(points):
+    """Return the west-east and north-south extent of the points, in metres."""
+    return ((max(c[0] for c in points) - min(c[0] for c in points)) * KX,
+            (max(c[1] for c in points) - min(c[1] for c in points)) * KY)
+
+
 def polygon(points, fill, stroke, width):
     """Return an SVG polygon element."""
     pts = " ".join(f"{x:.1f},{y:.1f}" for x, y in points)
@@ -87,15 +106,16 @@ def main():
         parent = f["properties"].get("parent")
         if parent:
             children.setdefault(parent, []).append(f)
+    fills = {}
+    for parts in children.values():
+        parts.sort(key=lambda f: f["properties"]["route_ref"])
+        for i, f in enumerate(parts):
+            fills[f["properties"]["route_ref"]] = SPLIT_FILLS[i % len(SPLIT_FILLS)]
 
-    lons = [c[0] for f in water for r in rings(f["geometry"]) for c in r]
-    lats = [c[1] for f in water for r in rings(f["geometry"]) for c in r]
-    lon0, lat1 = min(lons), max(lats)
-    scale = min((WIDTH - 2 * MARGIN) / ((max(lons) - lon0) * KX),
-                (HEIGHT - 2 * MARGIN) / ((lat1 - min(lats)) * KY))
-
-    def project(lon, lat):
-        return MARGIN + (lon - lon0) * KX * scale, MARGIN + (lat1 - lat) * KY * scale
+    water_pts = [c for f in water for r in rings(f["geometry"]) for c in r]
+    w, h = extent_m(water_pts)
+    scale = min((WIDTH - 2 * MARGIN) / w, (HEIGHT - 2 * MARGIN) / h)
+    project = projector(water_pts, scale, MARGIN, MARGIN)
 
     out = [
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {WIDTH} {HEIGHT}" width="{WIDTH}" height="{HEIGHT}" '
@@ -112,10 +132,7 @@ def main():
             out.append(polygon([project(*c) for c in r], "url(#water)", "#7d9fbf", 0.6))
 
     def fill_for(f):
-        parent = f["properties"].get("parent")
-        if not parent:
-            return WALL
-        return SPLIT_FILLS[children[parent].index(f) % len(SPLIT_FILLS)]
+        return fills.get(f["properties"].get("route_ref"), WALL) if f["properties"].get("parent") else WALL
 
     for f in candidates:
         for r in rings(f["geometry"]):
@@ -143,7 +160,7 @@ def main():
         name_th = f["properties"].get("parent_name_th") or f["properties"]["name_th"]
         out.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="11" fill="#fff" stroke="#000" stroke-width="1.4"/>'
                    + text(x, y + 4.5, str(order), 13, weight="bold", anchor="middle"))
-        dx, dy, anchor = LABEL[order]
+        dx, dy, anchor = LABEL.get(order, DEFAULT_LABEL)
         label = name + (" (split)" if name in children else "")
         line = text(x + dx, y + dy, label, 16, weight="bold", anchor=anchor)
         if name_th:
@@ -175,8 +192,11 @@ def main():
                f'<line x1="{420 + bar:.1f}" y1="1052" x2="{420 + bar:.1f}" y2="1068" stroke="#000" stroke-width="2"/>'
                + text(420 + bar / 2, 1048, "500 m (approximate)", 14, anchor="middle"))
 
-    for parent, (left, top), ppm in INSETS:
-        out.extend(inset(parent, children[parent], left, top, ppm, fill_for))
+    split = sorted(children, key=lambda p: children[p][0]["properties"]["route_order"])
+    if len(split) > len(INSET_SLOTS):
+        raise SystemExit(f"{len(split)} split records but {len(INSET_SLOTS)} inset slots: add a slot to INSET_SLOTS")
+    for parent, (left, top) in zip(split, INSET_SLOTS):
+        out.extend(inset(parent, children[parent], left, top, fill_for))
 
     out.extend(legend())
     out.append(text(40, 1240, "Map data © OpenStreetMap contributors (ODbL), retrieved 2026-10-08. "
@@ -185,18 +205,15 @@ def main():
     OUT.write_text("\n".join(out) + "\n", encoding="utf-8")
 
 
-def inset(parent, parts, left, top, ppm, fill_for):
+def inset(parent, parts, left, top, fill_for):
     """Return SVG elements for a large-scale panel of one split record."""
     pts = [c for f in parts for r in rings(f["geometry"]) for c in r]
-    lon0 = min(c[0] for c in pts)
-    lat1 = max(c[1] for c in pts)
-    w = (max(c[0] for c in pts) - lon0) * KX * ppm
-    h = (lat1 - min(c[1] for c in pts)) * KY * ppm
-    pad, head, foot = 16, 30, 22 * len(parts) + 26
+    w_m, h_m = extent_m(pts)
+    ppm = min(INSET_MAX_PPM, INSET_MAX_SIZE[0] / w_m, INSET_MAX_SIZE[1] / h_m)
+    w, h = w_m * ppm, h_m * ppm
+    pad, head, foot = 16, 30, 22 * len(parts) + 36
     box = max(w + 2 * pad, 360)
-
-    def project(lon, lat):
-        return left + pad + (lon - lon0) * KX * ppm, top + head + (lat1 - lat) * KY * ppm
+    project = projector(pts, ppm, left + pad, top + head)
 
     out = [f'<rect x="{left}" y="{top}" width="{box:.1f}" height="{h + head + foot:.1f}" '
            'fill="#fff" stroke="#000"/>',

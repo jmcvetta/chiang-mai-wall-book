@@ -1,6 +1,6 @@
 # Provisional full-circuit inventory
 
-Status: **provisional, remote, unreviewed.** Compiled 2026-10-08 for issue #3. Revised 2026-10-08 for issue #23: every wall candidate re-examined segment by segment ([`evidence.md`](evidence.md)); Chang Phueak Gate and Chaeng Ku Hueang split. This is research staging, not book content. Nobody visited, measured or photographed any site for it. A coordinating AI agent read maps, dated satellite imagery, dated photographs and written sources.
+Status: **provisional, remote, unreviewed.** Compiled 2026-10-08 for issue #3. Revised 2026-10-08 for issue #23: every wall candidate re-examined segment by segment ([`evidence.md`](evidence.md)); Chang Phueak Gate and Chaeng Ku Hueang split. This is research staging, not book content. Nobody visited, measured or photographed any site for the issue #3 compilation. A coordinating AI agent read maps, dated satellite imagery, dated photographs and written sources. The issue #23 revision adds two owner photographs of the Chang Phueak Gate east wing, taken on site on 2026-10-08; they are the only ground observation in this file.
 
 It names candidate subjects and shows where evidence is missing. It does not fix a chapter count, a phase count or any construction date.
 
@@ -315,7 +315,7 @@ The agent's reading of esri-world-imagery-wv3-2026-01-10, stretch by stretch. Th
 
 ## Limits of this remote coverage
 
-- Nobody visited the sites. Every observation is either a 2017 photograph by a named photographer or the agent's reading of the 2026-01-10 satellite image.
+- No researcher visited the sites. Every observation is a 2017 photograph by a named photographer, the agent's reading of the 2026-01-10 satellite image, or one of the owner's two photographs of the Chang Phueak Gate east wing (2026-10-08).
 - A plan view cannot show the faces of walls or moat banks, their material, or their height. "None visible" cannot rule out low or buried remains.
 - Tree canopy hides the wall line along four of the nine stretches between stops.
 - No conservation report, excavation report, survey drawing or registration notice was obtained. All dating claims come from news items, encyclopedias and one scholar's quoted post.

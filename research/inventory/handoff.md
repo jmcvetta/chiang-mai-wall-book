@@ -5,7 +5,7 @@ section:        shared (inventory stage)
 stage:          inventory correction: segment-by-segment re-examination of the nine wall candidates (issue #23)
 status:         draft
 input revision: master 0c91685bd4188b294aada082dc2d95a06033c75e (inventory, register, procedure, PLANNING.md); owner photographs 39c8cb77b33ce8d8e46296a658aaa941c85bc894
-outputs:        research/inventory/evidence.md; research/inventory/inventory.md; research/inventory/inventory-map.geojson; research/inventory/inventory-map.svg; research/inventory/render_map.py; research/inventory/handoff.md; research/shared/sources/register.md
+outputs:        research/inventory/evidence.md; research/inventory/inventory.md; research/inventory/inventory-map.geojson; research/inventory/inventory-map.svg; research/inventory/render_map.py; research/inventory/handoff.md; research/shared/sources/register.md; research/materials/owner-photos/2026-10-08-chang-phueak-east-wing-border.md (integration note). Inputs carried on this branch, not written by this run: the two owner photographs and the RIGHTS.md rows for them (39c8cb7).
 sources used:   esri-world-imagery-wv3-2026-01-10 (zoom-19 tiles, evidence.md I1–I11); owner observations and photographs (evidence.md O1–O4); osm-api-2026-10-08
 missing inputs: every Wikimedia Commons photograph listed per stop (HTTP 429 on every image request, 2026-10-08); human dated observations of every stop except the Chang Phueak east wing
 next recipient: editorial owner
@@ -46,7 +46,7 @@ Your answers are a workflow approval and owner observations. They are not eviden
 run id:             2
 process version:    docs/research-procedure.md and PLANNING.md at 0c91685bd4188b294aada082dc2d95a06033c75e
 input commits:      0c91685bd4188b294aada082dc2d95a06033c75e; 39c8cb77b33ce8d8e46296a658aaa941c85bc894
-output paths:       research/inventory/evidence.md; research/inventory/inventory.md; research/inventory/inventory-map.geojson; research/inventory/inventory-map.svg; research/inventory/render_map.py; research/inventory/handoff.md; research/shared/sources/register.md
+output paths:       research/inventory/evidence.md; research/inventory/inventory.md; research/inventory/inventory-map.geojson; research/inventory/inventory-map.svg; research/inventory/render_map.py; research/inventory/handoff.md; research/shared/sources/register.md; research/materials/owner-photos/2026-10-08-chang-phueak-east-wing-border.md
 roles and models:   coordinator, imagery reader and integration: claude-opus-5-5 (Claude Code 2.1.294, session https://claude.ai/code/session_01B9iPhbgxLo95tSL22vv4nw); orchestrator: claude-fable-5-1 (session https://claude.ai/code/session_015qm2XbEoqVgzqF9HSjP8ps); owner: observations and photographs
 outstanding work:   view the Commons photographs listed per stop (rate-limited); owner check of the Chang Phueak and Ku Hueang splits; ground photographs for the stops under canopy; the Commons leads listed in inventory.md
 defects found:      run 1 read each wing at Chang Phueak Gate as one block although the imagery shows the split (owner finding, #4); run 1 left the map render script out of the repository; Wikimedia returned HTTP 429 for every image in both runs
