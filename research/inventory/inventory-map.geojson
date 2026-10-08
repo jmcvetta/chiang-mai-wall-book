@@ -1,0 +1,1243 @@
+{
+ "type": "FeatureCollection",
+ "properties": {
+  "title": "Provisional full-circuit inventory, Chiang Mai old-city wall and moat",
+  "status": "provisional remote inventory; unreviewed",
+  "compiled": "2026-10-08",
+  "license": "ODbL 1.0 (contains geometry derived from OpenStreetMap)",
+  "attribution": "© OpenStreetMap contributors"
+ },
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "layer": "candidate",
+    "route_order": 1,
+    "name": "Chang Phueak Gate",
+    "name_th": "ประตูช้างเผือก",
+    "feature_type": "gate",
+    "category": "wall fabric",
+    "status": "candidate; unresolved composite",
+    "extent_source": "OpenStreetMap ways 24871597, 97191493 (outline as mapped; accuracy not stated by OSM)",
+    "record": "research/inventory/inventory.md"
+   },
+   "geometry": {
+    "type": "MultiPolygon",
+    "coordinates": [
+     [
+      [
+       [
+        98.9864557,
+        18.7954022
+       ],
+       [
+        98.9859462,
+        18.7954147
+       ],
+       [
+        98.9859477,
+        18.7954685
+       ],
+       [
+        98.9864572,
+        18.795456
+       ],
+       [
+        98.9864557,
+        18.7954022
+       ]
+      ]
+     ],
+     [
+      [
+       [
+        98.9867564,
+        18.7954472
+       ],
+       [
+        98.9871447,
+        18.7954375
+       ],
+       [
+        98.9871433,
+        18.7953884
+       ],
+       [
+        98.9867551,
+        18.795398
+       ],
+       [
+        98.9867564,
+        18.7954472
+       ]
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "layer": "candidate",
+    "route_order": 2,
+    "name": "Chaeng Si Phum",
+    "name_th": "แจ่งศรีภูมิ",
+    "feature_type": "corner",
+    "category": "wall fabric",
+    "status": "candidate; unresolved composite",
+    "extent_source": "OpenStreetMap ways 263459882 (outline as mapped; accuracy not stated by OSM)",
+    "record": "research/inventory/inventory.md"
+   },
+   "geometry": {
+    "type": "MultiPolygon",
+    "coordinates": [
+     [
+      [
+       [
+        98.9930934,
+        18.7952412
+       ],
+       [
+        98.9934126,
+        18.7952334
+       ],
+       [
+        98.9934971,
+        18.7952955
+       ],
+       [
+        98.993707,
+        18.7952885
+       ],
+       [
+        98.9937526,
+        18.7952092
+       ],
+       [
+        98.9937399,
+        18.7951844
+       ],
+       [
+        98.9936782,
+        18.795166
+       ],
+       [
+        98.9936579,
+        18.7947054
+       ],
+       [
+        98.9936132,
+        18.7947065
+       ],
+       [
+        98.9936019,
+        18.7949775
+       ],
+       [
+        98.9936033,
+        18.7950875
+       ],
+       [
+        98.9936057,
+        18.79516
+       ],
+       [
+        98.9935965,
+        18.7951857
+       ],
+       [
+        98.9930915,
+        18.7952062
+       ],
+       [
+        98.9930934,
+        18.7952412
+       ]
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "layer": "candidate",
+    "route_order": 3,
+    "name": "Tha Phae Gate",
+    "name_th": "ประตูท่าแพ",
+    "feature_type": "gate",
+    "category": "wall fabric",
+    "status": "candidate; unresolved composite",
+    "extent_source": "OpenStreetMap ways 263464175, 263464174 (outline as mapped; accuracy not stated by OSM)",
+    "record": "research/inventory/inventory.md"
+   },
+   "geometry": {
+    "type": "MultiPolygon",
+    "coordinates": [
+     [
+      [
+       [
+        98.9932952,
+        18.7883788
+       ],
+       [
+        98.9932545,
+        18.7883809
+       ],
+       [
+        98.9932207,
+        18.7877886
+       ],
+       [
+        98.9932614,
+        18.7877865
+       ],
+       [
+        98.9932952,
+        18.7883788
+       ]
+      ]
+     ],
+     [
+      [
+       [
+        98.9932146,
+        18.7877417
+       ],
+       [
+        98.9931653,
+        18.7868867
+       ],
+       [
+        98.9932098,
+        18.7868844
+       ],
+       [
+        98.9932591,
+        18.7877394
+       ],
+       [
+        98.9932146,
+        18.7877417
+       ]
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "layer": "candidate",
+    "route_order": 4,
+    "name": "Chaeng Katam",
+    "name_th": "แจ่งก๊ะต้ำ",
+    "feature_type": "corner",
+    "category": "wall fabric",
+    "status": "candidate; unresolved composite",
+    "extent_source": "OpenStreetMap ways 791602197 (outline as mapped; accuracy not stated by OSM)",
+    "record": "research/inventory/inventory.md"
+   },
+   "geometry": {
+    "type": "MultiPolygon",
+    "coordinates": [
+     [
+      [
+       [
+        98.992782,
+        18.7814518
+       ],
+       [
+        98.9927879,
+        18.7814699
+       ],
+       [
+        98.9927986,
+        18.7815132
+       ],
+       [
+        98.9928076,
+        18.7815641
+       ],
+       [
+        98.9928019,
+        18.7815905
+       ],
+       [
+        98.9927831,
+        18.7816095
+       ],
+       [
+        98.9927705,
+        18.7815676
+       ],
+       [
+        98.9927561,
+        18.7815306
+       ],
+       [
+        98.9927406,
+        18.7814984
+       ],
+       [
+        98.9927248,
+        18.7814708
+       ],
+       [
+        98.9927094,
+        18.7814477
+       ],
+       [
+        98.9926952,
+        18.7814291
+       ],
+       [
+        98.9926828,
+        18.7814148
+       ],
+       [
+        98.9926731,
+        18.7814048
+       ],
+       [
+        98.9926624,
+        18.7813944
+       ],
+       [
+        98.9926565,
+        18.7813879
+       ],
+       [
+        98.9926469,
+        18.7813783
+       ],
+       [
+        98.9926338,
+        18.7813666
+       ],
+       [
+        98.9926173,
+        18.781354
+       ],
+       [
+        98.9925976,
+        18.7813414
+       ],
+       [
+        98.992575,
+        18.78133
+       ],
+       [
+        98.9925495,
+        18.7813208
+       ],
+       [
+        98.9925213,
+        18.7813148
+       ],
+       [
+        98.9924907,
+        18.781313
+       ],
+       [
+        98.9924941,
+        18.7812794
+       ],
+       [
+        98.9925346,
+        18.7812775
+       ],
+       [
+        98.992572,
+        18.7812801
+       ],
+       [
+        98.992606,
+        18.7812863
+       ],
+       [
+        98.9926286,
+        18.7812927
+       ],
+       [
+        98.9926319,
+        18.7812917
+       ],
+       [
+        98.9926617,
+        18.7813029
+       ],
+       [
+        98.9926727,
+        18.7812565
+       ],
+       [
+        98.9926753,
+        18.7812516
+       ],
+       [
+        98.9926776,
+        18.7812481
+       ],
+       [
+        98.9926795,
+        18.7812457
+       ],
+       [
+        98.9926812,
+        18.781244
+       ],
+       [
+        98.9926856,
+        18.781243
+       ],
+       [
+        98.9926905,
+        18.781242
+       ],
+       [
+        98.9926967,
+        18.781241
+       ],
+       [
+        98.9927039,
+        18.7812399
+       ],
+       [
+        98.9927116,
+        18.7812389
+       ],
+       [
+        98.9927195,
+        18.7812382
+       ],
+       [
+        98.9927271,
+        18.7812378
+       ],
+       [
+        98.9927341,
+        18.781238
+       ],
+       [
+        98.9927402,
+        18.7812388
+       ],
+       [
+        98.992745,
+        18.78124
+       ],
+       [
+        98.9927488,
+        18.7812415
+       ],
+       [
+        98.9927518,
+        18.7812432
+       ],
+       [
+        98.9927545,
+        18.7812451
+       ],
+       [
+        98.9927572,
+        18.7812473
+       ],
+       [
+        98.9927602,
+        18.7812499
+       ],
+       [
+        98.9927638,
+        18.7812527
+       ],
+       [
+        98.9927684,
+        18.781256
+       ],
+       [
+        98.9927742,
+        18.7812595
+       ],
+       [
+        98.9927818,
+        18.7812635
+       ],
+       [
+        98.9927894,
+        18.7812698
+       ],
+       [
+        98.9927955,
+        18.7812795
+       ],
+       [
+        98.9928003,
+        18.7812918
+       ],
+       [
+        98.9928038,
+        18.7813055
+       ],
+       [
+        98.9928064,
+        18.7813199
+       ],
+       [
+        98.9928081,
+        18.7813338
+       ],
+       [
+        98.9928092,
+        18.7813463
+       ],
+       [
+        98.9928097,
+        18.7813564
+       ],
+       [
+        98.9928099,
+        18.7813633
+       ],
+       [
+        98.9928095,
+        18.7813661
+       ],
+       [
+        98.9928065,
+        18.7813681
+       ],
+       [
+        98.9928027,
+        18.7813705
+       ],
+       [
+        98.9927643,
+        18.7813829
+       ],
+       [
+        98.992782,
+        18.7814518
+       ]
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "layer": "candidate",
+    "route_order": 5,
+    "name": "Chiang Mai Gate",
+    "name_th": "ประตูเชียงใหม่",
+    "feature_type": "gate",
+    "category": "wall fabric",
+    "status": "candidate; unresolved composite",
+    "extent_source": "OpenStreetMap ways 330870296, 330870295 (outline as mapped; accuracy not stated by OSM)",
+    "record": "research/inventory/inventory.md"
+   },
+   "geometry": {
+    "type": "MultiPolygon",
+    "coordinates": [
+     [
+      [
+       [
+        98.9886739,
+        18.7813978
+       ],
+       [
+        98.9888923,
+        18.7813949
+       ],
+       [
+        98.9888917,
+        18.7813537
+       ],
+       [
+        98.9886733,
+        18.7813566
+       ],
+       [
+        98.9886739,
+        18.7813978
+       ]
+      ]
+     ],
+     [
+      [
+       [
+        98.9890557,
+        18.7814007
+       ],
+       [
+        98.98944,
+        18.7813841
+       ],
+       [
+        98.989438,
+        18.7813406
+       ],
+       [
+        98.9890536,
+        18.7813572
+       ],
+       [
+        98.9890557,
+        18.7814007
+       ]
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "layer": "candidate",
+    "route_order": 6,
+    "name": "Saen Pung Gate",
+    "name_th": "ประตูแสนปุง",
+    "feature_type": "gate",
+    "category": "wall fabric",
+    "status": "candidate; unresolved composite",
+    "extent_source": "OpenStreetMap ways 1211639140, 1211639141 (outline as mapped; accuracy not stated by OSM)",
+    "record": "research/inventory/inventory.md"
+   },
+   "geometry": {
+    "type": "MultiPolygon",
+    "coordinates": [
+     [
+      [
+       [
+        98.9814885,
+        18.781585
+       ],
+       [
+        98.9814877,
+        18.7815377
+       ],
+       [
+        98.9812313,
+        18.7815416
+       ],
+       [
+        98.9812321,
+        18.7815889
+       ],
+       [
+        98.9814885,
+        18.781585
+       ]
+      ]
+     ],
+     [
+      [
+       [
+        98.9819595,
+        18.7815692
+       ],
+       [
+        98.9819576,
+        18.781516
+       ],
+       [
+        98.9817016,
+        18.7815243
+       ],
+       [
+        98.9817035,
+        18.7815774
+       ],
+       [
+        98.9819595,
+        18.7815692
+       ]
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "layer": "candidate",
+    "route_order": 7,
+    "name": "Chaeng Ku Hueang",
+    "name_th": "แจ่งกู่เฮือง",
+    "feature_type": "corner",
+    "category": "wall fabric",
+    "status": "candidate; unresolved composite",
+    "extent_source": "OpenStreetMap ways 317516851 (outline as mapped; accuracy not stated by OSM)",
+    "record": "research/inventory/inventory.md"
+   },
+   "geometry": {
+    "type": "MultiPolygon",
+    "coordinates": [
+     [
+      [
+       [
+        98.9778355,
+        18.7820995
+       ],
+       [
+        98.9778603,
+        18.7820984
+       ],
+       [
+        98.9778752,
+        18.7819997
+       ],
+       [
+        98.9778839,
+        18.781887
+       ],
+       [
+        98.9779297,
+        18.7817917
+       ],
+       [
+        98.9779945,
+        18.7817229
+       ],
+       [
+        98.9780685,
+        18.7816968
+       ],
+       [
+        98.9782659,
+        18.7816686
+       ],
+       [
+        98.9784018,
+        18.7816575
+       ],
+       [
+        98.9783928,
+        18.7816343
+       ],
+       [
+        98.9782293,
+        18.7816386
+       ],
+       [
+        98.9780653,
+        18.7816615
+       ],
+       [
+        98.9780611,
+        18.7816378
+       ],
+       [
+        98.9780496,
+        18.7816088
+       ],
+       [
+        98.9780389,
+        18.7815916
+       ],
+       [
+        98.9780163,
+        18.7815803
+       ],
+       [
+        98.977989,
+        18.7815771
+       ],
+       [
+        98.9779304,
+        18.7815809
+       ],
+       [
+        98.9778798,
+        18.7816027
+       ],
+       [
+        98.9778538,
+        18.7816272
+       ],
+       [
+        98.9778457,
+        18.7816479
+       ],
+       [
+        98.9778482,
+        18.7816747
+       ],
+       [
+        98.9778619,
+        18.7816983
+       ],
+       [
+        98.9779142,
+        18.7817357
+       ],
+       [
+        98.9779071,
+        18.7817449
+       ],
+       [
+        98.977895,
+        18.7817625
+       ],
+       [
+        98.9778578,
+        18.7818377
+       ],
+       [
+        98.9778355,
+        18.7819434
+       ],
+       [
+        98.9778355,
+        18.7820995
+       ]
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "layer": "candidate",
+    "route_order": 8,
+    "name": "Suan Dok Gate",
+    "name_th": "ประตูสวนดอก",
+    "feature_type": "gate",
+    "category": "wall fabric",
+    "status": "candidate; unresolved composite",
+    "extent_source": "OpenStreetMap ways 473546718, 323670037 (outline as mapped; accuracy not stated by OSM)",
+    "record": "research/inventory/inventory.md"
+   },
+   "geometry": {
+    "type": "MultiPolygon",
+    "coordinates": [
+     [
+      [
+       [
+        98.9781705,
+        18.7887341
+       ],
+       [
+        98.978151,
+        18.7883334
+       ],
+       [
+        98.9782059,
+        18.788331
+       ],
+       [
+        98.9782254,
+        18.7887317
+       ],
+       [
+        98.9781705,
+        18.7887341
+       ]
+      ]
+     ],
+     [
+      [
+       [
+        98.9781812,
+        18.7890958
+       ],
+       [
+        98.9782404,
+        18.789093
+       ],
+       [
+        98.978232,
+        18.7889351
+       ],
+       [
+        98.9781728,
+        18.7889379
+       ],
+       [
+        98.9781812,
+        18.7890958
+       ]
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "layer": "candidate",
+    "route_order": 9,
+    "name": "Chaeng Hua Lin",
+    "name_th": "แจ่งหัวลิน",
+    "feature_type": "corner",
+    "category": "wall fabric",
+    "status": "candidate; unresolved composite",
+    "extent_source": "OpenStreetMap ways 317516852 (outline as mapped; accuracy not stated by OSM)",
+    "record": "research/inventory/inventory.md"
+   },
+   "geometry": {
+    "type": "MultiPolygon",
+    "coordinates": [
+     [
+      [
+       [
+        98.9814278,
+        18.7955976
+       ],
+       [
+        98.981425,
+        18.795572
+       ],
+       [
+        98.9807034,
+        18.7955886
+       ],
+       [
+        98.9797781,
+        18.7956115
+       ],
+       [
+        98.9790361,
+        18.7956284
+       ],
+       [
+        98.9788917,
+        18.7956307
+       ],
+       [
+        98.9787843,
+        18.795625
+       ],
+       [
+        98.978708,
+        18.7956104
+       ],
+       [
+        98.9786436,
+        18.7955753
+       ],
+       [
+        98.9785804,
+        18.7955098
+       ],
+       [
+        98.9785469,
+        18.7954556
+       ],
+       [
+        98.9785374,
+        18.7953879
+       ],
+       [
+        98.9785028,
+        18.7950152
+       ],
+       [
+        98.9784619,
+        18.7950153
+       ],
+       [
+        98.9784749,
+        18.7952351
+       ],
+       [
+        98.978479,
+        18.7953709
+       ],
+       [
+        98.9785056,
+        18.795504
+       ],
+       [
+        98.9785517,
+        18.7955833
+       ],
+       [
+        98.978504,
+        18.7956329
+       ],
+       [
+        98.9785344,
+        18.7957015
+       ],
+       [
+        98.9785936,
+        18.7957148
+       ],
+       [
+        98.9786282,
+        18.7957058
+       ],
+       [
+        98.9786604,
+        18.7956719
+       ],
+       [
+        98.9787169,
+        18.7956909
+       ],
+       [
+        98.9792773,
+        18.7956616
+       ],
+       [
+        98.9814278,
+        18.7955976
+       ]
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "layer": "reach",
+    "reach": "Chang Phueak Gate to Chaeng Si Phum",
+    "wall_line": "none-visible",
+    "city_side_bank": "unexamined for masonry",
+    "outer_side_bank": "unexamined for masonry",
+    "geometry_note": "Schematic straight line between stop anchors. Illustrative only: not a surveyed wall or moat line."
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      98.98658,
+      18.79543
+     ],
+     [
+      98.9937,
+      18.79525
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "layer": "reach",
+    "reach": "Chaeng Si Phum to Tha Phae Gate",
+    "wall_line": "obscured",
+    "city_side_bank": "unexamined for masonry",
+    "outer_side_bank": "unexamined for masonry",
+    "geometry_note": "Schematic straight line between stop anchors. Illustrative only: not a surveyed wall or moat line."
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      98.9937,
+      18.79525
+     ],
+     [
+      98.99324,
+      18.78785
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "layer": "reach",
+    "reach": "Tha Phae Gate to Chaeng Katam",
+    "wall_line": "obscured",
+    "city_side_bank": "unexamined for masonry",
+    "outer_side_bank": "unexamined for masonry",
+    "geometry_note": "Schematic straight line between stop anchors. Illustrative only: not a surveyed wall or moat line."
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      98.99324,
+      18.78785
+     ],
+     [
+      98.9928,
+      18.78125
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "layer": "reach",
+    "reach": "Chaeng Katam to Chiang Mai Gate",
+    "wall_line": "none-visible",
+    "city_side_bank": "unexamined for masonry",
+    "outer_side_bank": "unexamined for masonry",
+    "geometry_note": "Schematic straight line between stop anchors. Illustrative only: not a surveyed wall or moat line."
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      98.9928,
+      18.78125
+     ],
+     [
+      98.98902,
+      18.78137
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "layer": "reach",
+    "reach": "Chiang Mai Gate to Saen Pung Gate",
+    "wall_line": "none-visible",
+    "city_side_bank": "unexamined for masonry",
+    "outer_side_bank": "unexamined for masonry",
+    "geometry_note": "Schematic straight line between stop anchors. Illustrative only: not a surveyed wall or moat line."
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      98.98902,
+      18.78137
+     ],
+     [
+      98.9816,
+      18.78155
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "layer": "reach",
+    "reach": "Saen Pung Gate to Chaeng Ku Hueang",
+    "wall_line": "none-visible",
+    "city_side_bank": "unexamined for masonry",
+    "outer_side_bank": "unexamined for masonry",
+    "geometry_note": "Schematic straight line between stop anchors. Illustrative only: not a surveyed wall or moat line."
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      98.9816,
+      18.78155
+     ],
+     [
+      98.9779,
+      18.78165
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "layer": "reach",
+    "reach": "Chaeng Ku Hueang to Suan Dok Gate",
+    "wall_line": "obscured",
+    "city_side_bank": "unexamined for masonry",
+    "outer_side_bank": "unexamined for masonry",
+    "geometry_note": "Schematic straight line between stop anchors. Illustrative only: not a surveyed wall or moat line."
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      98.9779,
+      18.78165
+     ],
+     [
+      98.9782,
+      18.78878
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "layer": "reach",
+    "reach": "Suan Dok Gate to Chaeng Hua Lin",
+    "wall_line": "obscured",
+    "city_side_bank": "unexamined for masonry",
+    "outer_side_bank": "unexamined for masonry",
+    "geometry_note": "Schematic straight line between stop anchors. Illustrative only: not a surveyed wall or moat line."
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      98.9782,
+      18.78878
+     ],
+     [
+      98.97855,
+      18.79565
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "layer": "reach",
+    "reach": "Chaeng Hua Lin to Chang Phueak Gate",
+    "wall_line": "none-visible",
+    "city_side_bank": "unexamined for masonry",
+    "outer_side_bank": "unexamined for masonry",
+    "geometry_note": "Schematic straight line between stop anchors. Illustrative only: not a surveyed wall or moat line."
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      98.97855,
+      18.79565
+     ],
+     [
+      98.98658,
+      18.79543
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "layer": "photo-point",
+    "label": "Photo point: 2017-03-29 11:43, moat between Chang Phueak Gate and Si Phum Corner (not viewed)",
+    "viewed": "not-viewed",
+    "coordinate_source": "Wikimedia Commons file page camera location (accuracy not stated)"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     98.991489,
+     18.795245
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "layer": "photo-point",
+    "label": "Photo point: 2017-03-29 12:01, moat between Hua Lin Corner and Chang Phuak Gate (viewed)",
+    "viewed": "viewed",
+    "coordinate_source": "Wikimedia Commons file page camera location (accuracy not stated)"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     98.982733,
+     18.795553
+    ]
+   }
+  }
+ ]
+}
