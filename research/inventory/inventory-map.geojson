@@ -5,7 +5,8 @@
   "status": "provisional remote inventory; unreviewed",
   "compiled": "2026-10-08",
   "license": "ODbL 1.0 (contains geometry derived from OpenStreetMap)",
-  "attribution": "© OpenStreetMap contributors"
+  "attribution": "© OpenStreetMap contributors",
+  "revised": "2026-10-08 (issue #23: Chang Phueak Gate and Chaeng Ku Hueang split; see evidence.md)"
  },
  "features": [
   {
@@ -13,13 +14,66 @@
    "properties": {
     "layer": "candidate",
     "route_order": 1,
-    "name": "Chang Phueak Gate",
-    "name_th": "ประตูช้างเผือก",
-    "feature_type": "gate",
+    "name": "Chang Phueak Gate West Wing, West Section",
+    "name_th": null,
+    "feature_type": "wall section",
     "category": "wall fabric",
-    "status": "candidate; unresolved composite",
-    "extent_source": "OpenStreetMap ways 24871597, 97191493 (outline as mapped; accuracy not stated by OSM)",
-    "record": "research/inventory/inventory.md"
+    "status": "candidate; unresolved; split from Chang Phueak Gate on 2026-10-08",
+    "extent_source": "Part of OpenStreetMap way 24871597 west of 98.986297 E (outline as mapped; accuracy not stated by OSM)",
+    "record": "research/inventory/inventory.md#chang-phueak-gate-west-wing-west-section",
+    "route_ref": "1a",
+    "parent": "Chang Phueak Gate",
+    "boundary_source": "Agent reading of esri-world-imagery-wv3-2026-01-10, zoom-19 tiles, 2026-10-08 (evidence.md I1); owner observations O1, O2",
+    "boundary_accuracy": "±3 m along the OSM outline (agent judgement of where the change occurs); excludes the imagery accuracy of 8.47 m and the OSM outline offset",
+    "parent_name_th": "ประตูช้างเผือก"
+   },
+   "geometry": {
+    "type": "MultiPolygon",
+    "coordinates": [
+     [
+      [
+       [
+        98.9862973,
+        18.7954061
+       ],
+       [
+        98.9859462,
+        18.7954147
+       ],
+       [
+        98.9859477,
+        18.7954685
+       ],
+       [
+        98.9862973,
+        18.7954599
+       ],
+       [
+        98.9862973,
+        18.7954061
+       ]
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "layer": "candidate",
+    "route_order": 1,
+    "name": "Chang Phueak Gate West Wing, Gate Section",
+    "name_th": null,
+    "feature_type": "wall section",
+    "category": "wall fabric",
+    "status": "candidate; unresolved; split from Chang Phueak Gate on 2026-10-08",
+    "extent_source": "Part of OpenStreetMap way 24871597 east of 98.986297 E (outline as mapped; accuracy not stated by OSM)",
+    "record": "research/inventory/inventory.md#chang-phueak-gate-west-wing-gate-section",
+    "route_ref": "1b",
+    "parent": "Chang Phueak Gate",
+    "boundary_source": "Agent reading of esri-world-imagery-wv3-2026-01-10, zoom-19 tiles, 2026-10-08 (evidence.md I1); owner observations O1, O2",
+    "boundary_accuracy": "±3 m along the OSM outline (agent judgement of where the change occurs); excludes the imagery accuracy of 8.47 m and the OSM outline offset",
+    "parent_name_th": "ประตูช้างเผือก"
    },
    "geometry": {
     "type": "MultiPolygon",
@@ -31,12 +85,12 @@
         18.7954022
        ],
        [
-        98.9859462,
-        18.7954147
+        98.9862973,
+        18.7954061
        ],
        [
-        98.9859477,
-        18.7954685
+        98.9862973,
+        18.7954599
        ],
        [
         98.9864572,
@@ -47,7 +101,31 @@
         18.7954022
        ]
       ]
-     ],
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "layer": "candidate",
+    "route_order": 1,
+    "name": "Chang Phueak Gate East Wing, Gate Section",
+    "name_th": null,
+    "feature_type": "wall section",
+    "category": "wall fabric",
+    "status": "candidate; unresolved; split from Chang Phueak Gate on 2026-10-08",
+    "extent_source": "Part of OpenStreetMap way 97191493 west of 98.986921 E (outline as mapped; accuracy not stated by OSM)",
+    "record": "research/inventory/inventory.md#chang-phueak-gate-east-wing-gate-section",
+    "route_ref": "1c",
+    "parent": "Chang Phueak Gate",
+    "boundary_source": "Agent reading of esri-world-imagery-wv3-2026-01-10, zoom-19 tiles, 2026-10-08 (evidence.md I2); owner photographs O3, O4; owner observation O1",
+    "boundary_accuracy": "±3 m along the OSM outline (agent judgement of where the change occurs); excludes the imagery accuracy of 8.47 m and the OSM outline offset",
+    "parent_name_th": "ประตูช้างเผือก"
+   },
+   "geometry": {
+    "type": "MultiPolygon",
+    "coordinates": [
      [
       [
        [
@@ -55,12 +133,12 @@
         18.7954472
        ],
        [
-        98.9871447,
-        18.7954375
+        98.9869212,
+        18.7954431
        ],
        [
-        98.9871433,
-        18.7953884
+        98.9869212,
+        18.7953939
        ],
        [
         98.9867551,
@@ -79,6 +157,54 @@
    "type": "Feature",
    "properties": {
     "layer": "candidate",
+    "route_order": 1,
+    "name": "Chang Phueak Gate East Wing, East Section",
+    "name_th": null,
+    "feature_type": "wall section",
+    "category": "wall fabric",
+    "status": "candidate; unresolved; split from Chang Phueak Gate on 2026-10-08",
+    "extent_source": "Part of OpenStreetMap way 97191493 east of 98.986921 E (outline as mapped; accuracy not stated by OSM)",
+    "record": "research/inventory/inventory.md#chang-phueak-gate-east-wing-east-section",
+    "route_ref": "1d",
+    "parent": "Chang Phueak Gate",
+    "boundary_source": "Agent reading of esri-world-imagery-wv3-2026-01-10, zoom-19 tiles, 2026-10-08 (evidence.md I2); owner photographs O3, O4; owner observation O1",
+    "boundary_accuracy": "±3 m along the OSM outline (agent judgement of where the change occurs); excludes the imagery accuracy of 8.47 m and the OSM outline offset",
+    "parent_name_th": "ประตูช้างเผือก"
+   },
+   "geometry": {
+    "type": "MultiPolygon",
+    "coordinates": [
+     [
+      [
+       [
+        98.9869212,
+        18.7954431
+       ],
+       [
+        98.9871447,
+        18.7954375
+       ],
+       [
+        98.9871433,
+        18.7953884
+       ],
+       [
+        98.9869212,
+        18.7953939
+       ],
+       [
+        98.9869212,
+        18.7954431
+       ]
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "layer": "candidate",
     "route_order": 2,
     "name": "Chaeng Si Phum",
     "name_th": "แจ่งศรีภูมิ",
@@ -86,7 +212,9 @@
     "category": "wall fabric",
     "status": "candidate; unresolved composite",
     "extent_source": "OpenStreetMap ways 263459882 (outline as mapped; accuracy not stated by OSM)",
-    "record": "research/inventory/inventory.md"
+    "record": "research/inventory/inventory.md",
+    "parent": null,
+    "route_ref": "2"
    },
    "geometry": {
     "type": "MultiPolygon",
@@ -169,7 +297,9 @@
     "category": "wall fabric",
     "status": "candidate; unresolved composite",
     "extent_source": "OpenStreetMap ways 263464175, 263464174 (outline as mapped; accuracy not stated by OSM)",
-    "record": "research/inventory/inventory.md"
+    "record": "research/inventory/inventory.md",
+    "parent": null,
+    "route_ref": "3"
    },
    "geometry": {
     "type": "MultiPolygon",
@@ -236,7 +366,9 @@
     "category": "wall fabric",
     "status": "candidate; unresolved composite",
     "extent_source": "OpenStreetMap ways 791602197 (outline as mapped; accuracy not stated by OSM)",
-    "record": "research/inventory/inventory.md"
+    "record": "research/inventory/inventory.md",
+    "parent": null,
+    "route_ref": "4"
    },
    "geometry": {
     "type": "MultiPolygon",
@@ -535,7 +667,9 @@
     "category": "wall fabric",
     "status": "candidate; unresolved composite",
     "extent_source": "OpenStreetMap ways 330870296, 330870295 (outline as mapped; accuracy not stated by OSM)",
-    "record": "research/inventory/inventory.md"
+    "record": "research/inventory/inventory.md",
+    "parent": null,
+    "route_ref": "5"
    },
    "geometry": {
     "type": "MultiPolygon",
@@ -602,7 +736,9 @@
     "category": "wall fabric",
     "status": "candidate; unresolved composite",
     "extent_source": "OpenStreetMap ways 1211639140, 1211639141 (outline as mapped; accuracy not stated by OSM)",
-    "record": "research/inventory/inventory.md"
+    "record": "research/inventory/inventory.md",
+    "parent": null,
+    "route_ref": "6"
    },
    "geometry": {
     "type": "MultiPolygon",
@@ -663,13 +799,18 @@
    "properties": {
     "layer": "candidate",
     "route_order": 7,
-    "name": "Chaeng Ku Hueang",
-    "name_th": "แจ่งกู่เฮือง",
+    "name": "Chaeng Ku Hueang Corner and Adjoining Runs",
+    "name_th": null,
     "feature_type": "corner",
     "category": "wall fabric",
-    "status": "candidate; unresolved composite",
-    "extent_source": "OpenStreetMap ways 317516851 (outline as mapped; accuracy not stated by OSM)",
-    "record": "research/inventory/inventory.md"
+    "status": "candidate; unresolved; split from Chaeng Ku Hueang on 2026-10-08",
+    "extent_source": "Part of OpenStreetMap way 317516851 west of 98.978225 E (outline as mapped; accuracy not stated by OSM)",
+    "record": "research/inventory/inventory.md#chaeng-ku-hueang-corner-and-adjoining-runs",
+    "route_ref": "7a",
+    "parent": "Chaeng Ku Hueang",
+    "boundary_source": "Agent reading of esri-world-imagery-wv3-2026-01-10, zoom-19 tiles, 2026-10-08 (evidence.md I9)",
+    "boundary_accuracy": "±3 m along the OSM outline (agent judgement of where the change occurs); excludes the imagery accuracy of 8.47 m and the OSM outline offset",
+    "parent_name_th": "แจ่งกู่เฮือง"
    },
    "geometry": {
     "type": "MultiPolygon",
@@ -705,20 +846,12 @@
         18.7816968
        ],
        [
-        98.9782659,
-        18.7816686
+        98.9782245,
+        18.7816745
        ],
        [
-        98.9784018,
-        18.7816575
-       ],
-       [
-        98.9783928,
-        18.7816343
-       ],
-       [
-        98.9782293,
-        18.7816386
+        98.9782245,
+        18.7816393
        ],
        [
         98.9780653,
@@ -801,6 +934,62 @@
    "type": "Feature",
    "properties": {
     "layer": "candidate",
+    "route_order": 7,
+    "name": "Chaeng Ku Hueang East Run, East Section",
+    "name_th": null,
+    "feature_type": "wall section",
+    "category": "wall fabric",
+    "status": "candidate; unresolved; split from Chaeng Ku Hueang on 2026-10-08",
+    "extent_source": "Part of OpenStreetMap way 317516851 east of 98.978225 E (outline as mapped; accuracy not stated by OSM)",
+    "record": "research/inventory/inventory.md#chaeng-ku-hueang-east-run-east-section",
+    "route_ref": "7b",
+    "parent": "Chaeng Ku Hueang",
+    "boundary_source": "Agent reading of esri-world-imagery-wv3-2026-01-10, zoom-19 tiles, 2026-10-08 (evidence.md I9)",
+    "boundary_accuracy": "±3 m along the OSM outline (agent judgement of where the change occurs); excludes the imagery accuracy of 8.47 m and the OSM outline offset",
+    "parent_name_th": "แจ่งกู่เฮือง"
+   },
+   "geometry": {
+    "type": "MultiPolygon",
+    "coordinates": [
+     [
+      [
+       [
+        98.9782245,
+        18.7816745
+       ],
+       [
+        98.9782659,
+        18.7816686
+       ],
+       [
+        98.9784018,
+        18.7816575
+       ],
+       [
+        98.9783928,
+        18.7816343
+       ],
+       [
+        98.9782293,
+        18.7816386
+       ],
+       [
+        98.9782245,
+        18.7816393
+       ],
+       [
+        98.9782245,
+        18.7816745
+       ]
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "layer": "candidate",
     "route_order": 8,
     "name": "Suan Dok Gate",
     "name_th": "ประตูสวนดอก",
@@ -808,7 +997,9 @@
     "category": "wall fabric",
     "status": "candidate; unresolved composite",
     "extent_source": "OpenStreetMap ways 473546718, 323670037 (outline as mapped; accuracy not stated by OSM)",
-    "record": "research/inventory/inventory.md"
+    "record": "research/inventory/inventory.md",
+    "parent": null,
+    "route_ref": "8"
    },
    "geometry": {
     "type": "MultiPolygon",
@@ -875,7 +1066,9 @@
     "category": "wall fabric",
     "status": "candidate; unresolved composite",
     "extent_source": "OpenStreetMap ways 317516852 (outline as mapped; accuracy not stated by OSM)",
-    "record": "research/inventory/inventory.md"
+    "record": "research/inventory/inventory.md",
+    "parent": null,
+    "route_ref": "9"
    },
    "geometry": {
     "type": "MultiPolygon",
@@ -1002,7 +1195,9 @@
     "category": "moatwork; bank side unresolved",
     "status": "candidate; unresolved",
     "extent_source": "No mapped extent. Point is the camera position stated for commons-linge-20170329-1201a (accuracy not stated), not the edge itself.",
-    "record": "research/inventory/inventory.md"
+    "record": "research/inventory/inventory.md",
+    "parent": null,
+    "route_ref": null
    },
    "geometry": {
     "type": "Point",
@@ -1257,6 +1452,22 @@
     "coordinates": [
      98.982733,
      18.795553
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "layer": "photo-point",
+    "label": "Photo C: owner photographs, 2026-10-08 23:52, Chang Phueak Gate east wing (viewed)",
+    "viewed": "viewed",
+    "coordinate_source": "Owner statement: at North Gate Jazz Co-op, OSM node 2110312355; accuracy \"at or near the club\", not measured"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     98.987,
+     18.79519
     ]
    }
   }
