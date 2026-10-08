@@ -60,7 +60,7 @@ Parallel work inside one section is allowed from the first pilot. Parallel work 
 | 3. Extract | One accessible source batch | Cheaper workers | `evidence-<source-bundle>.md`, one file per worker and bundle; the section researcher merges them into `evidence.md` and keeps ids unique | Inspected passages | The batch is extracted, or an item is found inaccessible | Section researcher, for difficult handwriting; competent human reviewer, for consequential translation ambiguity |
 | 4. Synthesize | Evidence batches and the list of missing sources | Section researcher | `claims.md`, `research-history.md` | Claim support status | Every candidate claim is classified; conflicts and unknowns are listed | Integration owner for identity or boundary changes; competent human for interpretation |
 | 5. Edit | History, claim ledger, standard chapter template | Writer / editor | `book/chapters/<name>.md` (meaning only, no visual styling) | none new | Each retained claim keeps its evidence link | Section researcher, if wording needs support the ledger lacks |
-| 6. Check | A chapter at a fixed revision | Mechanical checks, then independent reviewers on claim batches | `review.md` findings | Review disposition | Every factual statement has been reviewed, captions, tables, map labels and footnotes included | Capable reviewer or competent human |
+| 6. Check | A chapter at a fixed revision (a commit SHA) | Mechanical checks, then independent reviewers on claim batches | `review.md` findings | Review disposition | Every factual statement has been reviewed, captions, tables, map labels and footnotes included | Capable reviewer or competent human |
 | 7. Reconcile | All review outputs and the full chapter | Independent section-level reviewer | Reconciliation entry in `review.md`; accept or revise decision | Whole-section consistency | No unresolved support objection is attached to a retained claim | Competent human; editorial owner |
 | 8. Correct and accept | Reconciliation decision | Writer / editor revises; coordinator records the run; editorial owner accepts | Revised chapter; updated `runs.md` | `owner-accepted` artifact status | Review reopened for every changed wording or evidence item | Editorial owner |
 
@@ -213,7 +213,7 @@ This section documents interfaces only. It does not build or run a benchmark, ad
 
 ### Sequence
 
-1. The first comparison uses independently reviewed first-pilot evidence and feeds the first-pilot owner decision (gate 2).
+1. The first comparison uses independently reviewed first-pilot evidence. Its outcome yields the provisional role selections that the owner accepts or rejects at gate 2.
 2. The second pilot uses the accepted provisional role selections. Its independently reviewed evidence supports locked confirmation before the final owner decision (gate 3) and chapter fanout.
 
 ### Invariants
@@ -241,9 +241,9 @@ This trace checks the specifications. It uses no historical content.
 
 1. The coordinator writes `brief.md` for a section already in the reviewed inventory. The brief carries the handoff header, with `next recipient: discovery worker`.
 2. A Thai-language discovery worker writes `discovery-thai.md` with entries at the *found* level and a search log. It names `next recipient: coordinator` and lists the items it could not obtain.
-3. The integration owner adds a source file for one obtained source. An extraction worker inspects a passage and writes an `evidence.md` entry with locator, scope and lineage.
+3. The integration owner adds a source file for one obtained source. An extraction worker inspects a passage and writes an entry with locator, scope and lineage in its own `evidence-<source-bundle>.md`. The section researcher merges the bundles into `evidence.md`.
 4. The section researcher writes ledger claims. Each cites evidence ids. A claim supported only by a copy of the same report is recorded with one lineage.
 5. The editor writes the chapter. A reviewer reopens each cited locator and writes findings with all required fields. A section-level reviewer reconciles across batches.
-6. The coordinator records the run in `runs.md` and the owner decides. If the decision is acceptance of the first pilot, gate 2 is recorded. A correction request starts run 2, and the earlier run stays on file.
+6. The coordinator records the run in `runs.md` and the owner reviews the run. The owner decides on gate 2 only after the corrected rerun of the same section. If the owner asks for corrections, run 2 starts, and the earlier run stays on file.
 
 Each recipient finds its inputs, output path, next recipient and escalation route in this document and the previous handoff header. No step needs the original planning conversation.
