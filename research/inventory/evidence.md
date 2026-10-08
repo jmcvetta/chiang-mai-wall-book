@@ -227,6 +227,8 @@ All listed in the inventory records or found by the photograph search. File page
 
 A Commons API `imageinfo` query for the same files at 17:16 also returned 429.
 
+A second paced pass, started after the `retry-after` period, fetched every file page again (17:39–17:44 UTC, HTTP 200) and requested every image once more, 8–10 seconds apart. Every image request returned HTTP 429 again. These second attempts are failed fetches too and are not listed per row above.
+
 ## Photograph search
 
 Run 2026-10-08.
