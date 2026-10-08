@@ -39,7 +39,7 @@ Every stage output begins with this header. A handoff without it is incomplete.
 section:        <descriptive section name, or "shared">
 stage:          <stage name from the table below>
 status:         draft | reviewed | owner-accepted
-input revision: <commit SHA of every input artifact>
+input revision: <commit SHA of every input artifact; for an input not yet committed write "uncommitted, awaiting integration: <path>">
 outputs:        <paths written>
 sources used:   <source keys with locators, or "none">
 missing inputs: <list, or "none">
@@ -57,12 +57,12 @@ Parallel work inside one section is allowed from the first pilot. Parallel work 
 | --- | --- | --- | --- | --- | --- | --- |
 | 1. Assign | Reviewed inventory entry using the existing inventory fields: name, mapped extent, name variants, identity uncertainties | Section coordinator | `research/sections/<name>/brief.md` stating questions, known sources, search scope, stopping point and output paths | none | The brief names scope and stopping point | Integration owner, if identity is ambiguous |
 | 2. Discover | Brief | Cheaper workers, one coherent stream each (Thai literature, non-Thai literature, images and maps/archives) | `discovery-thai.md`, `discovery-other-languages.md`, `discovery-images-and-maps.md` | Source access status only | Search scope exhausted or the stopping point reached; searched and inaccessible items listed | Coordinator, for a source needing paid or restricted access |
-| 3. Extract | One accessible source batch | Cheaper workers | `evidence.md` entries (one worker per file or source bundle) | Inspected passages | The batch is extracted, or an item is found inaccessible | Section researcher, for difficult handwriting or consequential translation ambiguity |
+| 3. Extract | One accessible source batch | Cheaper workers | `evidence-<source-bundle>.md`, one file per worker and bundle; the section researcher merges them into `evidence.md` and keeps ids unique | Inspected passages | The batch is extracted, or an item is found inaccessible | Section researcher, for difficult handwriting; competent human reviewer, for consequential translation ambiguity |
 | 4. Synthesize | Evidence batches and the list of missing sources | Section researcher | `claims.md`, `research-history.md` | Claim support status | Every candidate claim is classified; conflicts and unknowns are listed | Integration owner for identity or boundary changes; competent human for interpretation |
 | 5. Edit | History, claim ledger, standard chapter template | Writer / editor | `book/chapters/<name>.md` (meaning only, no visual styling) | none new | Each retained claim keeps its evidence link | Section researcher, if wording needs support the ledger lacks |
 | 6. Check | A chapter at a fixed revision | Mechanical checks, then independent reviewers on claim batches | `review.md` findings | Review disposition | Every factual statement has been reviewed, captions, tables, map labels and footnotes included | Capable reviewer or competent human |
 | 7. Reconcile | All review outputs and the full chapter | Independent section-level reviewer | Reconciliation entry in `review.md`; accept or revise decision | Whole-section consistency | No unresolved support objection is attached to a retained claim | Competent human; editorial owner |
-| 8. Correct and accept | Reconciliation decision | Coordinator, then editorial owner | Revised chapter; updated `runs.md` | `owner-accepted` artifact status | Review reopened for every changed wording or evidence item | Editorial owner |
+| 8. Correct and accept | Reconciliation decision | Writer / editor revises; coordinator records the run; editorial owner accepts | Revised chapter; updated `runs.md` | `owner-accepted` artifact status | Review reopened for every changed wording or evidence item | Editorial owner |
 
 A mechanical check can find a dangling note or an empty locator. It cannot show that a citation supports a claim.
 
@@ -151,7 +151,7 @@ final disposition:   supported as written | supported only with narrower wording
 reviewer:            <role and actual model or person>
 ```
 
-A reviewer who suspects an error but cannot show it records the finding as `unresolved`. Findings for batches run in parallel. One reviewer then records a whole-section reconciliation covering contradictions, misapplied dates and false corroboration across batches. A changed claim, boundary, date or interpretation reopens the findings it touches.
+A reviewer who suspects an error but cannot show it records the finding as `unresolved`. Findings for batches run in parallel. One reviewer then records a whole-section reconciliation covering contradictions, misapplied dates and false corroboration across batches. A reconciliation entry has these fields: `reconciled revision` (chapter commit), `review batches covered`, `cross-claim issues` (each naming the claim ids and findings involved, or `none`), `contradictions or misapplied dates`, `false corroboration checked`, `decision` (accept | revise) and `reviewer`. It does not use the per-finding fields above, which describe one claim. A changed claim, boundary, date or interpretation reopens the findings it touches.
 
 ### Run record: `runs.md`
 
@@ -172,7 +172,7 @@ frontier:           <investigation record link, or "none">
 
 ## Shared records and invalidation
 
-- Shared files are `research/shared/sources/`, `research/shared/chronology.md`, `research/shared/names.md` and `research/materials/`. Only the integration owner edits them. Workers propose additions in their own files. The owner deduplicates and commits.
+- Shared files are `research/shared/sources/`, `research/shared/chronology.md`, `research/shared/names.md` and `research/materials/`. Only the integration owner edits them. Workers propose additions in their own files, `proposals/<worker-or-stream>.md` inside their section directory (or `research/shared/proposals/` for circuit-wide work), using the source-register, evidence or name fields defined in this document so that locators, lineage and access level are kept. The owner deduplicates and commits.
 - `research/shared/names.md` distinguishes official names, historical variants, transliterations and editorial names. A name is never reassigned to different masonry. A split or merger is documented and references are updated.
 - `research/shared/chronology.md` states, for each event, the geographic extent actually established. A gate date is not a date for adjacent wall or moatwork.
 - Reusing a source record in another section keeps its locators, scope and lineage. The section's own evidence record states why the source applies to that exact fabric.
@@ -183,7 +183,7 @@ frontier:           <investigation record link, or "none">
 ## Human gates
 
 1. **Inventory acceptance** permits the first pilot.
-2. **First-pilot acceptance** permits the second pilot.
+2. **First-pilot acceptance** permits the second pilot. Before the owner decides, the first pilot is corrected and rerun on the same section at least once, as PLANNING.md requires. The accepted provisional role selections are recorded in the run record's `roles and models` field and in the owner's dated approval.
 3. **Second-pilot acceptance** permits scaling to later sections.
 
 Owner feedback causes agent corrections and repeated review. It is never silent acceptance, and it does not trigger an automatic third pilot. Record each approval as a workflow decision with its date. All failed attempts are preserved. The inventory uses only the existing inventory fields in PLANNING.md, so inventory work does not depend on anything here.
