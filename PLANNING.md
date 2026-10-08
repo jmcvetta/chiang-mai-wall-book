@@ -291,6 +291,8 @@ Agree a search scope and stopping point for each assignment, record what was sea
 
 ### Git-tracked research staging
 
+The operational handoff contracts, record specifications and gate procedure for this section are in [docs/research-procedure.md](docs/research-procedure.md). That file adds detail only; this document remains the policy.
+
 Commit intermediate research artifacts, not only polished chapters. Each stage must leave enough information for another agent or a later session to continue without relying on the original conversation. Staging content is research material, not automatically accepted book content.
 
 Proposed organization, to be exercised and refined during the pilots:
