@@ -994,6 +994,27 @@
   {
    "type": "Feature",
    "properties": {
+    "layer": "candidate",
+    "route_order": null,
+    "name": "Hua Lin–Chang Phueak Moat Waterline Edge",
+    "name_th": null,
+    "feature_type": "moat waterline edge",
+    "category": "moatwork; bank side unresolved",
+    "status": "candidate; unresolved",
+    "extent_source": "No mapped extent. Point is the camera position stated for commons-linge-20170329-1201a (accuracy not stated), not the edge itself.",
+    "record": "research/inventory/inventory.md"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     98.982733,
+     18.795553
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
     "layer": "reach",
     "reach": "Chang Phueak Gate to Chaeng Si Phum",
     "wall_line": "none-visible",
@@ -1093,8 +1114,8 @@
     "layer": "reach",
     "reach": "Chiang Mai Gate to Saen Pung Gate",
     "wall_line": "none-visible",
-    "city_side_bank": "unexamined for masonry",
-    "outer_side_bank": "unexamined for masonry",
+    "city_side_bank": "one bank, side not established: constructed waterline edge seen in commons-linge-20170329-1029a (2017-03-29); material undetermined",
+    "outer_side_bank": "one bank, side not established: constructed waterline edge seen in commons-linge-20170329-1029a (2017-03-29); material undetermined",
     "geometry_note": "Schematic straight line between stop anchors. Illustrative only: not a surveyed wall or moat line."
    },
    "geometry": {
@@ -1190,7 +1211,7 @@
     "reach": "Chaeng Hua Lin to Chang Phueak Gate",
     "wall_line": "none-visible",
     "city_side_bank": "unexamined for masonry",
-    "outer_side_bank": "unexamined for masonry",
+    "outer_side_bank": "constructed waterline edge seen in commons-linge-20170329-1201a (2017-03-29); side inferred as outer, unresolved; material undetermined",
     "geometry_note": "Schematic straight line between stop anchors. Illustrative only: not a surveyed wall or moat line."
    },
    "geometry": {
@@ -1211,7 +1232,7 @@
    "type": "Feature",
    "properties": {
     "layer": "photo-point",
-    "label": "Photo point: 2017-03-29 11:43, moat between Chang Phueak Gate and Si Phum Corner (not viewed)",
+    "label": "Photo A: commons-linge-20170329-1143a, 2017-03-29 11:43, moat between Chang Phueak Gate and Si Phum Corner (not viewed)",
     "viewed": "not-viewed",
     "coordinate_source": "Wikimedia Commons file page camera location (accuracy not stated)"
    },
@@ -1227,7 +1248,7 @@
    "type": "Feature",
    "properties": {
     "layer": "photo-point",
-    "label": "Photo point: 2017-03-29 12:01, moat between Hua Lin Corner and Chang Phuak Gate (viewed)",
+    "label": "Photo B: commons-linge-20170329-1201a, 2017-03-29 12:01, moat between Hua Lin Corner and Chang Phuak Gate (viewed)",
     "viewed": "viewed",
     "coordinate_source": "Wikimedia Commons file page camera location (accuracy not stated)"
    },

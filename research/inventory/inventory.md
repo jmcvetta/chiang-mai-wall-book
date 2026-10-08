@@ -51,7 +51,7 @@ Status terms:
 | Stretch, clockwise | Wall line | City-side bank | Outer-side bank |
 | ------------------ | --------- | -------------- | --------------- |
 | 1 Chang Phueak Gate | fabric mapped | unexamined | unexamined |
-| Chang Phueak Gate to Chaeng Si Phum | none visible | unexamined | unexamined (photo A exists, not viewed) |
+| Chang Phueak Gate to Chaeng Si Phum | none visible | unexamined | unexamined (photo A, commons-linge-20170329-1143a, exists; not viewed) |
 | 2 Chaeng Si Phum | fabric mapped | unexamined | unexamined |
 | Chaeng Si Phum to Tha Phae Gate | obscured | unexamined | unexamined |
 | 3 Tha Phae Gate | fabric mapped | unexamined | unexamined |
@@ -59,7 +59,7 @@ Status terms:
 | 4 Chaeng Katam | fabric mapped | unexamined | unexamined |
 | Chaeng Katam to Chiang Mai Gate | none visible | unexamined | unexamined |
 | 5 Chiang Mai Gate | fabric mapped | unexamined | unexamined |
-| Chiang Mai Gate to Saen Pung Gate | none visible | one constructed waterline edge seen, bank side not established (photo 1029a) | see previous column |
+| Chiang Mai Gate to Saen Pung Gate | none visible | one bank, side not established: constructed waterline edge seen in commons-linge-20170329-1029a (not on the map: no camera position stated) | same observation; side not established |
 | 6 Saen Pung Gate | fabric mapped | unexamined | unexamined |
 | Saen Pung Gate to Chaeng Ku Hueang | none visible | unexamined | unexamined |
 | 7 Chaeng Ku Hueang | fabric mapped | unexamined | unexamined |
@@ -67,7 +67,7 @@ Status terms:
 | 8 Suan Dok Gate | fabric mapped, mostly under canopy | unexamined | unexamined |
 | Suan Dok Gate to Chaeng Hua Lin | obscured | unexamined | unexamined |
 | 9 Chaeng Hua Lin | fabric mapped | unexamined | unexamined |
-| Chaeng Hua Lin to Chang Phueak Gate | none visible | see the waterline-edge record | see the waterline-edge record (photo B) |
+| Chaeng Hua Lin to Chang Phueak Gate | none visible | unexamined (the photographer stood on this bank) | constructed waterline edge seen in photo B, commons-linge-20170329-1201a; side inferred, unresolved (see the waterline-edge record) |
 
 Evidence for the wall-line column: the agent's reading of esri-world-imagery-wv3-2026-01-10, recorded per stretch in [Observations of the 2026-01-10 image](#observations-of-the-2026-01-10-image). The difference between "none visible" and "obscured" is the agent's judgement of canopy cover. A human should check it.
 
@@ -135,7 +135,7 @@ Fields common to all nine wall records, stated once here:
 - **Position**: route order 5, south side. OSM ways [330870296](https://www.openstreetmap.org/way/330870296) (west; about 5 m × 23 m) and [330870295](https://www.openstreetmap.org/way/330870295) (east; about 7 m × 41 m). Gate node [6107975995](https://www.openstreetmap.org/node/6107975995).
 - **Observation, 2026-01-10**: two blocks on the city side either side of a road opening.
 - **Extent**: as mapped.
-- **Phases, claims to test**: "Rebuilt 1966-1969" (wikivoyage-chiang-mai; extractor; uncited). The eighty-years claim for all five gates (thaipbs-319832) also applies.
+- **Phases, claims to test**: "Built c.1296 at the founding of the city by King Mangrai." / "Reconstructed c.1800. Rebuilt 1966-1969." (wikivoyage-chiang-mai; extractor; uncited). The first date concerns the first gate on the site, not the standing blocks. The eighty-years claim for all five gates (thaipbs-319832) also applies.
 - **Condition**: not established beyond the plan view.
 - **Evidence**: as cited. Candidate identification photograph: "201703291042a Chiang Mai, City Wall, Chiang Mai Gate.jpg" (2017-03-29); not viewed.
 - **Status**: candidate; unresolved composite.
@@ -168,7 +168,7 @@ Fields common to all nine wall records, stated once here:
 - **Position**: route order 8, west side. OSM ways [473546718](https://www.openstreetmap.org/way/473546718) (south of the opening; about 45 m × 8 m) and [323670037](https://www.openstreetmap.org/way/323670037) (north; about 18 m × 7 m). Gate node [6717438786](https://www.openstreetmap.org/node/6717438786).
 - **Observation, 2026-01-10**: the gate area is largely under canopy. The agent could not confirm the mapped fabric in the image. The record rests on the OSM outline and the news items below.
 - **Extent**: as mapped; unconfirmed.
-- **Phases, claims to test**: "The ancient gates and walls were restored in 1818" (nation-40027862); "Renovated ... in 1821" (citylife-suan-dok-2023). These name a campaign for the gates generally, not the standing fabric here.
+- **Phases, claims to test**: "The ancient gates and walls were restored in 1818" (nation-40027862); "Renovated ... in 1821" (citylife-suan-dok-2023). These name a campaign for the gates generally, not the standing fabric here. The eighty-years claim for all five gates (thaipbs-319832) also applies.
 - **Condition**: a two-metre vertical crack "on the north side of the gate", and the wall "supported by a mound of earth" (nation-40027862, 21 May 2023).
 - **Evidence**: as cited. Candidate identification photograph: "201703291225a P Chiang Mai, City Wall, Saun Dok Gate.jpg" (2017-03-29); not viewed.
 - **Status**: candidate; unresolved composite.
@@ -178,7 +178,7 @@ Fields common to all nine wall records, stated once here:
 - **Identity**: Chaeng Hua Lin, แจ่งหัวลิน. Corner, wall fabric. Commons also uses "Hua Rin".
 - **Position**: route order 9, north-west corner. OSM way [317516852](https://www.openstreetmap.org/way/317516852) (about 78 m × 313 m; tagged `historic=ruins`, `material=brick`).
 - **Observation, 2026-01-10**: a corner structure at the corner of the moat, a long wall run east along the city side of the north moat, and a shorter run south along the west moat. The overlaid OSM outline follows them.
-- **Extent**: one OSM outline covers the corner and both runs. The east run is roughly four times the corner's size.
+- **Extent**: one OSM outline covers the corner and both runs. The outline spans 313 m east–west and 78 m north–south, the corner included. Where the corner ends and the east run begins is not established.
 - **Possible split**: the east run may be a separate subject from the corner. No evidence decides it. If research separates them, the run needs its own descriptive name, for example one built from "Chaeng Hua Lin", "North" and "Wall"; the existing name stays with the corner. That example is an illustration, not an adopted name.
 - **Phases, claims to test**: none specific found.
 - **Condition**: not established beyond the plan view.

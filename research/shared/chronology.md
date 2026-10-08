@@ -25,7 +25,20 @@ Source keys refer to `research/shared/sources/register.md`.
 | Tha Phae Gate | Built new by the municipality and the Fine Arts Department in พ.ศ. 2528 (text) or 2529 (infobox) | Thai Wikipedia | th-wikipedia-tha-phae-r12962538 | The page contradicts itself |
 | Tha Phae Gate | Reconstructed 1985–1986, or 1985–1987; renovated 1966–1967 | English Wikipedia | en-wikipedia-tha-phae-r1360504006 | The page contradicts itself; lineage with the Thai article likely |
 | Tha Phae Gate | Rebuilt with Fine Arts Department permission, following an old photograph, พ.ศ. 2529 | Surapol Damrikul, as quoted | thaipbs-319832 | |
-| Chiang Mai Gate | "Rebuilt 1966-1969" | Wikivoyage | wikivoyage-chiang-mai | Extractor reading; uncited |
+| Chiang Mai Gate | "Reconstructed c.1800. Rebuilt 1966-1969." | Wikivoyage | wikivoyage-chiang-mai | Extractor reading; uncited; c.1800 may derive from Penth |
+| Chaeng Ku Hueang | "Rebuilt c. 1800" | Wikivoyage | wikivoyage-chiang-mai | Extractor reading; uncited. The only dating statement found for any corner. |
+| Tha Phae Gate | "Rebuilt 1985-1986." | Wikivoyage | wikivoyage-chiang-mai | Extractor reading; probably the Wikipedia lineage |
+
+## Statements about the first structure on the site
+
+These say when a gate first stood there. They do not date the standing fabric.
+
+| Component | Statement | Source | Limits |
+| --- | --- | --- | --- |
+| Chiang Mai Gate | "Built c.1296 at the founding of the city by King Mangrai." | wikivoyage-chiang-mai | Extractor reading; uncited |
+| Tha Phae Gate | "Built c.1296 as Chiang Ruak Gate after a nearby village." | wikivoyage-chiang-mai | Extractor reading; uncited |
+| Chang Phueak Gate | "Built by King Mangrai c.1296." | wikivoyage-chiang-mai | Extractor reading; uncited |
+| Tha Phae Gate | "สร้างขึ้นครั้งแรกในรัชสมัยพญามังราย เมื่อแรกตั้งเมืองเชียงใหม่ในปี พ.ศ. 1839" | th-wikipedia-tha-phae-r12962538 | Extractor reading (see the Thai discovery log) |
 
 ## Statements about earlier campaigns
 

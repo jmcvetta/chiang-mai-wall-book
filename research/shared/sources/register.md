@@ -49,7 +49,7 @@ Worker discovery logs, with fuller search scope and the leads not followed, are 
 
 A series of photographs by Hartmann Linge on Wikimedia Commons, taken on 28 and 29 March 2017. Each file page states the date in its `Date` field and an EXIF "date and time of data generation" that agrees with it. Each file page states both CC BY-SA 4.0 (permission text) and CC BY-SA 3.0 (Licensing section); the page does not resolve the conflict. Requested credit: "© Hartmann Linge, Wikimedia Commons, CC-by-sa 4.0". Not cleared for the book; no copy is stored in the repository.
 
-Files used in the inventory (Verification: extractor, for date and description; the image itself was viewed where the entry says so):
+Files used in the inventory (Verification: extractor, for date and description; the image itself was viewed where the entry says so). The map labels two of them: photo A is commons-linge-20170329-1143a and photo B is commons-linge-20170329-1201a.
 
 | Key | File | Date taken | Description on the page | Camera position on the page | Image viewed |
 | --- | --- | --- | --- | --- | --- |
@@ -118,7 +118,7 @@ Gate and corner files from the same series, one per stop, are listed with dates 
 - Title: Chiang Mai (Wikivoyage)
 - URL: https://en.wikivoyage.org/wiki/Chiang_Mai
 - Access: inspected. Verification: extractor.
-- Statements relayed: "Sections of the wall dating to their restoration a few decades ago remain at the gates and corners, but of the rest only the moat remains."; Chiang Mai Gate "Rebuilt 1966-1969"; Ku Huang Corner "Rebuilt c. 1800".
+- Statements relayed: "Sections of the wall dating to their restoration a few decades ago remain at the gates and corners, but of the rest only the moat remains."; Chiang Mai Gate "Built c.1296 at the founding of the city by King Mangrai." / "Reconstructed c.1800. Rebuilt 1966-1969."; Tha Phae Gate "Built c.1296 ..." / "Rebuilt 1985-1986."; Chang Phuak Gate "Built by King Mangrai c.1296."; Ku Huang Corner "Rebuilt c. 1800".
 - Limits: travel wiki, uncited. A lead only.
 
 ---

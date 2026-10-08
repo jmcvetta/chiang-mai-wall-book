@@ -8,7 +8,7 @@
 
 | Input | Revision |
 | ----- | -------- |
-| Planning document | `PLANNING.md` at 08dd2d2fcc31187b47b829b1e97906419bf0dc57 (branch `initial`) |
+| Planning document | [`PLANNING.md` at 08dd2d2](https://github.com/jmcvetta/chiang-mai-wall-book/blob/08dd2d2fcc31187b47b829b1e97906419bf0dc57/PLANNING.md) (branch `initial`; not on `master`) |
 | Repository base | `master` at 96e3db15b91945314f6f23bd866456300018723d |
 | Operational procedure (issue #2) | Not available. No procedure file existed at the base revision. This run followed the planning document directly. |
 | OpenStreetMap | API 0.6 `map` call, retrieved 2026-10-08. Element versions are in the extract. |
@@ -42,7 +42,7 @@ This asks for a plausibility check, not an expert survey or a walk. Open the map
 1. Are the nine stops the places you would expect to see on a walk round the moat: five gates and four corners?
 2. Is anything you know of missing? In particular, any stretch of wall between the stops, or any brick or stone moat bank.
 3. Do the names read sensibly? Two need a choice: Chaeng Katam (several Thai spellings) and Saen Pung Gate (also called Suan Prung Gate).
-4. At Chaeng Hua Lin, one record covers the corner and a run of wall about 300 m long to its east. Does that look like one thing or two?
+4. At Chaeng Hua Lin, one record covers the corner and a run of wall to its east; together their outline spans 313 m east–west. Does that look like one thing or two?
 5. Should the outer earthen wall (กำแพงดิน) and its surviving corner (แจ่งหายยา) be in the book at all? They are outside the moat circuit and outside this inventory.
 
 Your answers are a workflow approval. They are not evidence for any claim in the book.
@@ -50,7 +50,7 @@ Your answers are a workflow approval. They are not evidence for any claim in the
 ## Findings that matter for the pilots
 
 - The visible wall fabric is concentrated at the gates and corners. No wall fabric was seen between them in the 2026-01-10 image.
-- At Chang Phueak Gate, a Fine Arts Office 7 official was reported in 2022 as saying the outer wall face was built in the early 2500s over an older wall. That is the clearest evidence so far that a "gate" record holds more than one phase.
+- At Chang Phueak Gate, a Fine Arts Office 7 official was reported in 2022 as saying the outer wall face was built "ช่วงต้นปี 2500" (literally "early in [the year] 2500"; era not written) to cover an older wall line. That is the clearest evidence so far that a "gate" record holds more than one phase.
 - Tha Phae Gate has the most dating statements, all pointing to a 1980s rebuilding, but the sources disagree on the year.
 - No source dates any moat bank lining. Both banks are unexamined almost everywhere.
 
