@@ -10,10 +10,11 @@ permissions:
   contents: read
 
 jobs:
-  git-sync:
-    name: Worktrunk sync
+  checks:
+    name: Checks
     runs-on: ubuntu-latest
     steps:
+      # Future OpenTofu validation belongs here as steps, not as a third job.
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:

@@ -1,0 +1,46 @@
+# Cut releases from Conventional Commit subjects on master.
+#
+# One package at `.`, one version, one `vX.Y.Z` tag series, in manifest mode:
+# release-please-config.json and .release-please-manifest.json, and no
+# `release-type:` input here (its presence would make release-please ignore
+# the config file). The manifest says `0.0.0`, release-please's "nothing
+# released yet" sentinel, and `initial-version` in the config makes the first
+# release 0.1.0. There is no sticky `release-as`.
+#
+# This is release automation, not CI: the repository's CI jobs are `Checks`
+# and `Release Projection` only.
+name: Release Please
+
+on:
+  push:
+    branches: [master]
+
+permissions: {}
+
+concurrency:
+  group: release-please
+  cancel-in-progress: false
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+    steps:
+      # Authenticate as the release bot App so CI reports on the release pull
+      # request unprompted. The App and its credentials are rollout work:
+      # repository variable RELEASE_BOT_APP_ID and secret
+      # RELEASE_BOT_PRIVATE_KEY. Without the variable the step is skipped and
+      # the default token is used.
+      - id: app-token
+        if: vars.RELEASE_BOT_APP_ID != ''
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ vars.RELEASE_BOT_APP_ID }}
+          private-key: ${{ secrets.RELEASE_BOT_PRIVATE_KEY }}
+
+      - uses: googleapis/release-please-action@v4
+        with:
+          token: ${{ steps.app-token.outputs.token || github.token }}

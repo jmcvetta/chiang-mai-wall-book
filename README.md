@@ -35,3 +35,23 @@ Run the isolated sync behavior suite with:
 ```sh
 make test-git-sync
 ```
+
+## CI and releases
+
+CI has exactly two jobs, both required to report on every pull request:
+
+- `Checks` runs the repository's validation, currently `make test-git-sync`
+  with a pinned Worktrunk download. Future OpenTofu validation is added as
+  steps in this job.
+- `Release Projection` validates that the pull request title is a Conventional
+  Commit and comments with the release the pull request would cause (often
+  none). An invalid title or a projection error fails the job. Release-please's
+  own release pull requests keep the title check and skip the projection.
+
+Releases use [release-please](https://github.com/googleapis/release-please) in
+manifest mode with one root package and `vX.Y.Z` tags. The first release is
+`v0.1.0`. On each push to `master` the `Release Please` workflow opens or
+updates a release pull request; merging it writes `CHANGELOG.md`, the tag and
+a GitHub release. The workflow authenticates as a GitHub App through the
+`RELEASE_BOT_APP_ID` variable and `RELEASE_BOT_PRIVATE_KEY` secret; installing
+the App is a manual rollout step.
