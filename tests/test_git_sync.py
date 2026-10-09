@@ -296,11 +296,12 @@ def test_different_remote_upstream_is_preserved(tmp_path: Path) -> None:
 
 
 def test_differently_named_upstream_is_preserved(tmp_path: Path) -> None:
-    """A branch tracking master rather than its own same-named ref has no PR provenance."""
+    """A gone differently named upstream must not match the local branch provenance."""
     box = sandbox(tmp_path)
     master = box["master"]
     assert isinstance(master, Path)
-    run(master, "git", "branch", f"--set-upstream-to=origin/master", BRANCH)
+    run(master, "git", "config", f"branch.{BRANCH}.remote", "origin")
+    run(master, "git", "config", f"branch.{BRANCH}.merge", "refs/heads/other")
     tip = box["tip"]
     assert isinstance(tip, str)
 
