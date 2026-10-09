@@ -41,8 +41,9 @@ make test-git-sync
 CI has exactly two jobs, both required to report on every pull request targeting `master`:
 
 - `Checks` runs the repository's validation, currently `make test-git-sync`
-  with a pinned Worktrunk download. Future OpenTofu validation is added as
-  steps in this job.
+  with a pinned Worktrunk download, then `tofu fmt -check`, `tofu init
+  -backend=false` and `tofu validate` on `infra/github` (see
+  [`infra/github/README.md`](infra/github/README.md)).
 - `Release Projection` validates that the pull request title is a Conventional
   Commit and comments with the release the pull request would cause (often
   none). An invalid title or a projection error fails the job. Release-please's

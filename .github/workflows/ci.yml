@@ -14,7 +14,6 @@ jobs:
     name: Checks
     runs-on: ubuntu-latest
     steps:
-      # Future OpenTofu validation belongs here as steps, not as a third job.
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
@@ -33,3 +32,13 @@ jobs:
           echo "$RUNNER_TEMP/worktrunk-x86_64-unknown-linux-musl" >> "$GITHUB_PATH"
       - name: Test git sync
         run: make test-git-sync
+      # OpenTofu validation lives here as steps, not as a third job. No GitHub
+      # credentials: init skips the backend and validate never calls the API.
+      - uses: opentofu/setup-opentofu@v2
+        with:
+          tofu_version_file: infra/github/.opentofu-version
+          tofu_wrapper: false
+      - name: Check OpenTofu formatting
+        run: make -C infra/github check-fmt
+      - name: Validate OpenTofu
+        run: make -C infra/github validate
