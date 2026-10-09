@@ -38,7 +38,7 @@ make test-git-sync
 
 ## CI and releases
 
-CI has exactly two jobs, both required to report on every pull request:
+CI has exactly two jobs, both required to report on every pull request targeting `master`:
 
 - `Checks` runs the repository's validation, currently `make test-git-sync`
   with a pinned Worktrunk download. Future OpenTofu validation is added as
