@@ -1,0 +1,2 @@
+[aliases]
+sync = "wt switch master --execute make -- __git_sync_run"

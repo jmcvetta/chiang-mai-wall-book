@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [master]
+  push:
+    branches: [master]
+
+permissions:
+  contents: read
+
+jobs:
+  git-sync:
+    name: Worktrunk sync
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - uses: astral-sh/setup-uv@v6
+      - name: Install Worktrunk 0.80.0
+        env:
+          WORKTRUNK_VERSION: 0.80.0
+          WORKTRUNK_SHA256: 532ce3ed5eecb1be274c925b5887f61671e2434a4ca2561b9a8ac9379dbba199
+        run: |
+          asset="worktrunk-x86_64-unknown-linux-musl.tar.xz"
+          url="https://github.com/max-sixty/worktrunk/releases/download/v${WORKTRUNK_VERSION}/${asset}"
+          curl --fail --silent --show-error --location "$url" --output "$RUNNER_TEMP/$asset"
+          echo "$WORKTRUNK_SHA256  $RUNNER_TEMP/$asset" | sha256sum --check
+          tar -xJf "$RUNNER_TEMP/$asset" -C "$RUNNER_TEMP"
+          echo "$RUNNER_TEMP/worktrunk-x86_64-unknown-linux-musl" >> "$GITHUB_PATH"
+      - name: Test git sync
+        run: make test-git-sync
