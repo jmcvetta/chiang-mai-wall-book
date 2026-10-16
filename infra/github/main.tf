@@ -16,12 +16,3 @@ locals {
   owner      = "jmcvetta"
   repository = "chiang-mai-wall-book"
 }
-
-# The release App's ID. Not a secret, so it is managed here. The private key
-# (RELEASE_BOT_PRIVATE_KEY) is a repository secret set by hand; it is never a
-# Tofu input, output or state value. No default: pass the value at plan time
-# (TF_VAR_release_bot_app_id) so it is not hard-coded in configuration.
-variable "release_bot_app_id" {
-  description = "Numeric ID of the release GitHub App (non-secret)"
-  type        = string
-}

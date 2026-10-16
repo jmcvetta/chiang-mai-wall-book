@@ -26,7 +26,8 @@ credentials.
 - `github_issue_label.*` -- the seven standard labels. Nothing else is
   declared, so stock and unrelated labels survive.
 - `github_actions_variable.release_bot_app_id` -- `RELEASE_BOT_APP_ID`, read by
-  `release-please.yml`. Its value is the input `release_bot_app_id`.
+  `release-please.yml`: `4861873`, the owner's single release App, shared with
+  daily-driver and the other repositories.
 
 ## Secrets and state
 
@@ -59,9 +60,8 @@ CI runs these as steps in the `Checks` job, without credentials.
 ```bash
 cd infra/github
 export GITHUB_TOKEN=$(gh auth token)              # admin on the repository
-export TF_VAR_release_bot_app_id=<numeric App ID>
 tofu init
-IMPORT_RELEASE_BOT_APP_ID=1 ./import.sh           # drop the variable if RELEASE_BOT_APP_ID does not exist yet
+./import.sh
 tofu plan
 tofu apply
 ```
@@ -71,7 +71,7 @@ stays a draft until that state is committed, so code and state merge together.
 
 `import.sh` adopts the repository, vulnerability alerts, Dependabot security
 updates and every existing label (`epic`, `task`, `human`, `story`, `bug`,
-`proposal`), and optionally the App ID variable. `research` does not exist and
+`proposal`), and `RELEASE_BOT_APP_ID` if it already exists. `research` does not exist and
 is created by the apply.
 
 ### Reading the plan
@@ -86,7 +86,7 @@ from this stack; if it appears, something is wrong.
 
 ## App credential setup
 
-Install the release GitHub App on the repository, set the secret
-`RELEASE_BOT_PRIVATE_KEY` by hand, and pass the App's numeric ID as
-`TF_VAR_release_bot_app_id`. `release-please.yml` switches to the App once
-`RELEASE_BOT_APP_ID` is set, so set the variable and key together.
+The release App (ID `4861873`) is shared across the owner's repositories.
+Install it on this repository and set the secret `RELEASE_BOT_PRIVATE_KEY` by
+hand. `release-please.yml` switches to the App once `RELEASE_BOT_APP_ID` is
+set, so install the App and set the key before applying.

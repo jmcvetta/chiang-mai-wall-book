@@ -7,7 +7,6 @@
 #
 # Usage:
 #   export GITHUB_TOKEN=$(gh auth token)
-#   export TF_VAR_release_bot_app_id=<numeric App ID>
 #   tofu init
 #   ./import.sh
 
@@ -34,9 +33,10 @@ for label in epic task human story bug proposal; do
 	import "github_issue_label.$label" "$REPO:$label"
 done
 
-# Only if the variable already exists (check Settings -> Variables first);
-# otherwise the apply creates it. The id is `<repository>:<variable name>`.
-if [[ "${IMPORT_RELEASE_BOT_APP_ID:-}" == "1" ]]; then
+# Adopted only if it already exists; otherwise the apply creates it. The id is
+# `<repository>:<variable name>`.
+if gh variable list --repo "jmcvetta/$REPO" --json name --jq '.[].name' |
+	grep -qx RELEASE_BOT_APP_ID; then
 	import 'github_actions_variable.release_bot_app_id' "$REPO:RELEASE_BOT_APP_ID"
 fi
 

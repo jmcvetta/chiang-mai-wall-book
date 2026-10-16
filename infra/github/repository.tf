@@ -65,9 +65,12 @@ resource "github_workflow_repository_permissions" "this" {
   can_approve_pull_request_reviews = false
 }
 
-# Credential interface for release-please.yml (vars.RELEASE_BOT_APP_ID).
+# The ID of the owner's shared release App, read by release-please.yml as
+# vars.RELEASE_BOT_APP_ID. Not a secret, so it is declared here and an apply
+# needs no input. The private key (RELEASE_BOT_PRIVATE_KEY) is a repository
+# secret set by hand and never enters configuration or state.
 resource "github_actions_variable" "release_bot_app_id" {
   repository    = github_repository.this.name
   variable_name = "RELEASE_BOT_APP_ID"
-  value         = var.release_bot_app_id
+  value         = "4861873"
 }
