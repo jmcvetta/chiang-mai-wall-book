@@ -34,9 +34,10 @@ for label in epic task human story bug proposal; do
 done
 
 # Adopted only if it already exists; otherwise the apply creates it. The id is
-# `<repository>:<variable name>`.
-if gh variable list --repo "jmcvetta/$REPO" --json name --jq '.[].name' |
-	grep -qx RELEASE_BOT_APP_ID; then
+# `<repository>:<variable name>`. The list is read before the test so that a gh
+# failure stops the script under `set -e` instead of reading as "absent".
+variables="$(gh variable list --repo "jmcvetta/$REPO" --json name --jq '.[].name')"
+if grep -qx RELEASE_BOT_APP_ID <<<"$variables"; then
 	import 'github_actions_variable.release_bot_app_id' "$REPO:RELEASE_BOT_APP_ID"
 fi
 
