@@ -42,3 +42,7 @@ jobs:
         run: make -C infra/github check-fmt
       - name: Validate OpenTofu
         run: make -C infra/github validate
+      - name: Check OpenTofu policy (Checkov)
+        run: |
+          uv tool install checkov==3.2.472
+          make -C infra/github checkov
