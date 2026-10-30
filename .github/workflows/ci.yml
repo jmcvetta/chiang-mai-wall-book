@@ -30,8 +30,53 @@ jobs:
           echo "$WORKTRUNK_SHA256  $RUNNER_TEMP/$asset" | sha256sum --check
           tar -xJf "$RUNNER_TEMP/$asset" -C "$RUNNER_TEMP"
           echo "$RUNNER_TEMP/worktrunk-x86_64-unknown-linux-musl" >> "$GITHUB_PATH"
-      - name: Test git sync
-        run: make test-git-sync
+      - name: Checkout pull request head for coverage
+        if: github.event_name == 'pull_request'
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          path: coverage-head
+      - name: Run Python coverage on pull request head
+        if: github.event_name == 'pull_request'
+        working-directory: coverage-head
+        run: make -f "$GITHUB_WORKSPACE/coverage-head/Makefile" test-coverage COVERAGE_DIR="$RUNNER_TEMP/python-coverage/head"
+      - name: Run Python coverage on push head
+        if: github.event_name == 'push'
+        run: make test-coverage COVERAGE_DIR="$RUNNER_TEMP/python-coverage/head"
+      - name: Checkout pull request base for coverage
+        if: github.event_name == 'pull_request'
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          path: coverage-base
+      - name: Run Python coverage on pull request base
+        if: github.event_name == 'pull_request'
+        working-directory: coverage-base
+        run: make -f "$GITHUB_WORKSPACE/coverage-head/Makefile" test-coverage COVERAGE_DIR="$RUNNER_TEMP/python-coverage/base"
+      - name: Add coverage comparison to the job summary
+        env:
+          HEAD_REVISION: ${{ github.event.pull_request.head.sha || github.sha }}
+          BASE_REVISION: ${{ github.event.pull_request.base.sha }}
+          NO_BASE_REASON: This workflow run is a push to master, so no pull-request base is available.
+        run: |
+          args=(
+            --head-report "$RUNNER_TEMP/python-coverage/head/coverage.json"
+            --head-revision "$HEAD_REVISION"
+            --summary "$GITHUB_STEP_SUMMARY"
+          )
+          if [[ -n "$BASE_REVISION" ]]; then
+            args+=(--base-report "$RUNNER_TEMP/python-coverage/base/coverage.json")
+            args+=(--base-revision "$BASE_REVISION")
+          else
+            args+=(--no-base-reason "$NO_BASE_REASON")
+          fi
+          python "$GITHUB_WORKSPACE/.github/scripts/coverage_summary.py" "${args[@]}"
+      - name: Upload Python coverage reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: python-coverage-reports
+          path: ${{ runner.temp }}/python-coverage/
+          if-no-files-found: error
       # OpenTofu validation lives here as steps, not as a third job. No GitHub
       # credentials: init skips the backend and validate never calls the API.
       - uses: opentofu/setup-opentofu@v2
