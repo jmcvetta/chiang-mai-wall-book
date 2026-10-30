@@ -11,7 +11,7 @@ authenticated GitHub CLI (`gh`). Install Worktrunk's shell integration once:
 wt config shell install
 ```
 
-Python 3 and `uv` are required to run the sync behavior tests.
+Python 3 and `uv` are required to run the tests.
 
 ## Syncing worktrees
 
@@ -28,22 +28,32 @@ clean worktrees in the foreground and deletes a branch only when its own
 integration checks allow it. Dirty or locked worktrees stay registered, and
 unintegrated branch commits remain available.
 
-## Tests
+## Tests and coverage
 
-Run the isolated sync behavior suite with:
+Run the existing sync behavior suite with:
 
 ```sh
 make test-git-sync
 ```
 
+Run the same suite with Python line and branch coverage:
+
+```sh
+make test-coverage
+```
+
+The report measures production Python under `research/inventory`; it does not
+measure the shell-based worktree sync implementation or test helpers. Coverage
+is reported without a minimum threshold. CI compares the pull request's base
+and head revisions and retains JSON and XML reports as artifacts.
+
 ## CI and releases
 
 CI has exactly two jobs, both required to report on every pull request targeting `master`:
 
-- `Checks` runs the repository's validation, currently `make test-git-sync`
-  with a pinned Worktrunk download, then `tofu fmt -check`, `tofu init
-  -backend=false` and `tofu validate` on `infra/github` (see
-  [`infra/github/README.md`](infra/github/README.md)).
+- `Checks` runs `make test-coverage`, with a pinned Worktrunk download, then
+  `tofu fmt -check`, `tofu init -backend=false` and `tofu validate` on
+  `infra/github` (see [`infra/github/README.md`](infra/github/README.md)).
 - `Release Projection` validates that the pull request title is a Conventional
   Commit and comments with the release the pull request would cause (often
   none). An invalid title or a projection error fails the job. Release-please's
