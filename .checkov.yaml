@@ -1,0 +1,18 @@
+# Checkov policy scan of the OpenTofu stack. Run from the repository root:
+#   checkov --config-file .checkov.yaml
+# Every skip below needs a reason; a new finding without one fails CI.
+directory:
+  - infra
+framework:
+  - terraform
+download-external-modules: false
+evaluate-variables: true
+quiet: true
+compact: true
+skip-check:
+  # The stack declares no modules, so there is no module source to pin.
+  - CKV_TF_1
+  # Same reason: no modules, so no module source to tag.
+  - CKV_TF_2
+  # The wall book is public by design; a private repository would defeat it.
+  - CKV_GIT_1
