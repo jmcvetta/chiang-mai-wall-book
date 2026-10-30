@@ -59,6 +59,11 @@ CI has exactly two jobs, both required to report on every pull request targeting
   none). An invalid title or a projection error fails the job. Release-please's
   own release pull requests keep the title check and skip the projection.
 
+Dependabot checks GitHub Actions in `/` and OpenTofu providers in
+`/infra/github` weekly. Update pull requests use the `chore(deps):` title
+prefix and pass through the same required checks.
+
+
 Releases use [release-please](https://github.com/googleapis/release-please) in
 manifest mode with one root package and `vX.Y.Z` tags. The first release is
 `v0.1.0`. On each push to `master` the `Release Please` workflow opens or
