@@ -8,6 +8,7 @@ on:
 
 permissions:
   contents: read
+  pull-requests: read
 
 jobs:
   checks:
@@ -15,6 +16,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: dorny/paths-filter@de90cc6fb38fc0963ad72b210f1f284cd68cea36 # v3.0.2
+        id: changes
+        with:
+          base: ${{ github.ref }}
+          filters: |
+            iac:
+              - 'infra/**'
+              - '.checkov.yaml'
+              - '.github/workflows/ci.yml'
       - uses: actions/setup-python@v5
         with:
           python-version: "3.x"
@@ -42,7 +52,8 @@ jobs:
         run: make -C infra/github check-fmt
       - name: Validate OpenTofu
         run: make -C infra/github validate
-      - name: Check OpenTofu policy (Checkov)
+      - name: Install Checkov and scan OpenTofu policy
+        if: steps.changes.outputs.iac == 'true'
         run: |
           uv tool install checkov==3.2.472
           make -C infra/github checkov
