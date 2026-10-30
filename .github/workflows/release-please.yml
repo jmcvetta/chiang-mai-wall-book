@@ -36,7 +36,7 @@ jobs:
       # the default token is used.
       - id: app-token
         if: vars.RELEASE_BOT_APP_ID != ''
-        uses: actions/create-github-app-token@v2
+        uses: actions/create-github-app-token@v3
         with:
           app-id: ${{ vars.RELEASE_BOT_APP_ID }}
           private-key: ${{ secrets.RELEASE_BOT_PRIVATE_KEY }}
