@@ -28,7 +28,7 @@ jobs:
       - uses: actions/setup-python@v7
         with:
           python-version: "3.x"
-      - uses: astral-sh/setup-uv@v6
+      - uses: astral-sh/setup-uv@v7
       - name: Install Worktrunk 0.80.0
         env:
           WORKTRUNK_VERSION: 0.80.0
