@@ -1,10 +1,21 @@
 SHELL := /bin/bash
 .SHELLFLAGS := -o pipefail -c
 
-.PHONY: __git_sync_run test-git-sync
+PYTEST_COV_VERSION := 6.2.1
+COVERAGE_DIR ?= .coverage-reports
+
+.PHONY: __git_sync_run test-git-sync test-coverage
 
 test-git-sync:
 	uv run --no-project --with pytest pytest tests/test_git_sync.py
+
+test-coverage:
+	mkdir -p "$(COVERAGE_DIR)"
+	COVERAGE_FILE="$(COVERAGE_DIR)/.coverage" uv run --no-project --with pytest --with pytest-cov==$(PYTEST_COV_VERSION) pytest tests/test_git_sync.py \
+		--cov=research/inventory --cov-branch \
+		--cov-report=term-missing \
+		--cov-report=json:"$(COVERAGE_DIR)/coverage.json" \
+		--cov-report=xml:"$(COVERAGE_DIR)/coverage.xml"
 
 # Offer only gone, same-remote, same-name upstream branches whose current tip
 # exactly matches a merged PR into master. Worktrunk decides whether the
