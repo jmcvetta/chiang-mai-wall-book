@@ -42,7 +42,7 @@ jobs:
           echo "$RUNNER_TEMP/worktrunk-x86_64-unknown-linux-musl" >> "$GITHUB_PATH"
       - name: Checkout pull request head for coverage
         if: github.event_name == 'pull_request'
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           path: coverage-head
@@ -55,7 +55,7 @@ jobs:
         run: make test-coverage COVERAGE_DIR="$RUNNER_TEMP/python-coverage/head"
       - name: Checkout pull request base for coverage
         if: github.event_name == 'pull_request'
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           ref: ${{ github.event.pull_request.base.sha }}
           path: coverage-base
