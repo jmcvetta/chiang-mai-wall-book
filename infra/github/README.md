@@ -59,7 +59,7 @@ changes skip Checkov, while the required `Checks` job still runs. Pull-request
 changes are compared with their base; master pushes are compared with the
 previous revision in the push, including multi-commit pushes. The first push
 has no prior revision, so the action treats all files as added. The
-`dorny/paths-filter` action is pinned to `v3.0.2`'s immutable commit.
+`dorny/paths-filter` action is pinned to `v4.0.3`'s immutable commit.
 
 Each skipped check in `.checkov.yaml` carries a reason; a policy finding
 without one fails CI.
