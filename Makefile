@@ -17,9 +17,12 @@ test-coverage:
 		--cov-report=json:"$(COVERAGE_DIR)/coverage.json" \
 		--cov-report=xml:"$(COVERAGE_DIR)/coverage.xml"
 
-# Offer only gone, same-remote, same-name upstream branches whose current tip
-# exactly matches a merged PR into master. Worktrunk decides whether the
-# branch is integrated and whether its worktree is safe to remove.
+# Offer ancestor-merged branches and gone-upstream branches to Worktrunk for
+# cleanup. Merged candidates need no provenance: a branch reachable from
+# master is integrated by definition. Gone candidates still require their
+# tracking metadata, a missing remote ref, and an exact merged-PR tip.
+# Worktrunk decides whether each branch is integrated and whether its
+# worktree is safe to remove.
 __git_sync_run:
 	git pull
 	git fetch --prune
@@ -28,20 +31,24 @@ __git_sync_run:
 		printf 'WARN: master has no remote; skipping branch cleanup\n' >&2; \
 		exit 0; \
 	fi; \
-	git branch -vv | awk '/: gone\]/ {sub(/^\+ /, ""); print $$1}' | \
-	while read -r branch; do \
-		[ "$$branch" = master ] && continue; \
-		[ "$$(git config --get "branch.$$branch.remote")" = "$$remote" ] || continue; \
-		[ "$$(git config --get "branch.$$branch.merge")" = "refs/heads/$$branch" ] || continue; \
-		git show-ref --verify --quiet "refs/remotes/$$remote/$$branch" && continue; \
-		tip=$$(git rev-parse --verify "refs/heads/$$branch") || continue; \
-		if ! merged=$$(gh pr list --state merged --head "$$branch" --limit 100 \
-			--json headRefOid,baseRefName \
-			--jq '.[] | select(.baseRefName == "master") | .headRefOid'); then \
-			printf 'WARN: could not check merged PR for %s; kept\n' "$$branch" >&2; \
-			continue; \
+	{ \
+		git branch --merged master --format='%(refname:short)' | awk '{print "merged " $$1}'; \
+		git branch -vv | awk '/: gone\]/ {sub(/^\+ /, ""); print "gone " $$1}'; \
+	} | awk '$$2 != "master" && !seen[$$2]++' | \
+	while read -r kind branch; do \
+		if [ "$$kind" = gone ]; then \
+			[ "$$(git config --get "branch.$$branch.remote")" = "$$remote" ] || continue; \
+			[ "$$(git config --get "branch.$$branch.merge")" = "refs/heads/$$branch" ] || continue; \
+			git show-ref --verify --quiet "refs/remotes/$$remote/$$branch" && continue; \
+			tip=$$(git rev-parse --verify "refs/heads/$$branch") || continue; \
+			if ! merged=$$(gh pr list --state merged --head "$$branch" --limit 100 \
+				--json headRefOid,baseRefName \
+				--jq '.[] | select(.baseRefName == "master") | .headRefOid'); then \
+				printf 'WARN: could not check merged PR for %s; kept\n' "$$branch" >&2; \
+				continue; \
+			fi; \
+			printf '%s\n' "$$merged" | grep -Fxq "$$tip" || continue; \
 		fi; \
-		printf '%s\n' "$$merged" | grep -Fxq "$$tip" || continue; \
 		worktree_path=$$(git worktree list --porcelain | awk -v branch="$$branch" \
 			'/^worktree / {path = substr($$0, 10)} \
 			 /^branch / && substr($$0, 8) == "refs/heads/" branch {print path; exit}'); \
