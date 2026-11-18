@@ -181,6 +181,15 @@ def add_pr(
     return prs
 
 
+def advance(box: dict[str, Path | dict[str, list[dict[str, str]]]]) -> None:
+    """Add a commit so the sandbox branch is no longer an ancestor of master."""
+    linked = box["linked"]
+    assert isinstance(linked, Path)
+    (linked / "post-merge.txt").write_text("post-merge work\n", encoding="utf-8")
+    run(linked, "git", "add", "post-merge.txt")
+    run(linked, "git", "commit", "-m", "post-merge work")
+
+
 def test_sync_pulls_prunes_and_switches_calling_shell_from_linked_worktree(tmp_path: Path) -> None:
     """A child process must not leave the caller in its original linked worktree."""
     box = sandbox(tmp_path)
@@ -247,9 +256,85 @@ def test_integrated_branch_without_worktree_is_removed(tmp_path: Path) -> None:
     assert not branch_exists(master, "direct")
 
 
-def test_gone_upstream_without_matching_pr_preserves_branch_and_worktree(tmp_path: Path) -> None:
-    """A deleted remote ref alone must not authorize removal of a linked worktree."""
+def test_merged_direct_branch_with_upstream_is_removed(tmp_path: Path) -> None:
+    """A live upstream must not keep an ancestor-merged branch from cleanup."""
     box = sandbox(tmp_path)
+    master = box["master"]
+    assert isinstance(master, Path)
+    run(master, "git", "branch", "direct", "master")
+    run(master, "git", "push", "-u", "origin", "direct")
+
+    result = sync(box)
+
+    assert result.returncode == 0, result.stderr
+    assert not branch_exists(master, "direct")
+
+
+def test_merged_linked_branch_with_upstream_is_removed(tmp_path: Path) -> None:
+    """Merged cleanup must include linked worktrees whose upstreams still exist."""
+    box = sandbox(tmp_path)
+    linked, master = box["linked"], box["master"]
+    assert isinstance(linked, Path) and isinstance(master, Path)
+    run(master, "git", "push", "origin", BRANCH)
+
+    result = sync(box)
+
+    assert result.returncode == 0, result.stderr
+    assert not linked.exists()
+    assert not branch_exists(master, BRANCH)
+
+
+def test_merged_branch_without_tracking_metadata_is_removed(tmp_path: Path) -> None:
+    """Absent tracking metadata must not keep an ancestor-merged branch from cleanup."""
+    box = sandbox(tmp_path)
+    master = box["master"]
+    assert isinstance(master, Path)
+    run(master, "git", "branch", "direct", "master")
+    run(master, "git", "push", "origin", "direct")
+
+    result = sync(box)
+
+    assert result.returncode == 0, result.stderr
+    assert not branch_exists(master, "direct")
+
+
+def test_unmerged_branch_with_upstream_is_kept(tmp_path: Path) -> None:
+    """Merged cleanup must not remove a worktree that still adds commits."""
+    box = sandbox(tmp_path)
+    linked, master = box["linked"], box["master"]
+    assert isinstance(linked, Path) and isinstance(master, Path)
+    (linked / "new.txt").write_text("unpublished\n", encoding="utf-8")
+    run(linked, "git", "add", "new.txt")
+    run(linked, "git", "commit", "-m", "unpublished change")
+    run(linked, "git", "push", "-u", "origin", BRANCH)
+
+    result = sync(box)
+
+    assert result.returncode == 0, result.stderr
+    assert linked.exists()
+    assert branch_exists(master, BRANCH)
+
+
+def test_merged_invoking_worktree_is_removed_and_caller_finishes_in_master(tmp_path: Path) -> None:
+    """A clean merged invoking worktree is removed after the caller switches to master."""
+    box = sandbox(tmp_path)
+    master, root = box["master"], box["root"]
+    assert isinstance(master, Path) and isinstance(root, Path)
+    caller = root / "caller worktree"
+    run(master, "git", "worktree", "add", "-b", "caller", str(caller), "master")
+
+    result = sync(box, caller)
+
+    assert result.returncode == 0, result.stderr
+    assert result.stdout.splitlines()[-1] == str(master)
+    assert not caller.exists()
+    assert not branch_exists(master, "caller")
+
+
+def test_gone_upstream_without_matching_pr_preserves_branch_and_worktree(tmp_path: Path) -> None:
+    """A deleted remote ref alone must not authorize removal of an unmerged worktree."""
+    box = sandbox(tmp_path)
+    advance(box)
     result = sync(box, prs={})
     linked, master = box["linked"], box["master"]
     assert isinstance(linked, Path) and isinstance(master, Path)
@@ -260,8 +345,9 @@ def test_gone_upstream_without_matching_pr_preserves_branch_and_worktree(tmp_pat
 
 
 def test_branch_without_upstream_is_preserved(tmp_path: Path) -> None:
-    """A matching PR SHA must not make an untracked local branch eligible."""
+    """A matching PR SHA must not make an untracked unmerged local branch eligible."""
     box = sandbox(tmp_path)
+    advance(box)
     master = box["master"]
     assert isinstance(master, Path)
     run(master, "git", "branch", "--unset-upstream", BRANCH)
@@ -278,6 +364,7 @@ def test_branch_without_upstream_is_preserved(tmp_path: Path) -> None:
 def test_different_remote_upstream_is_preserved(tmp_path: Path) -> None:
     """A gone branch on another remote must not be cleaned as an origin branch."""
     box = sandbox(tmp_path)
+    advance(box)
     master, root = box["master"], box["root"]
     assert isinstance(master, Path) and isinstance(root, Path)
     other = root / "other.git"
@@ -298,6 +385,7 @@ def test_different_remote_upstream_is_preserved(tmp_path: Path) -> None:
 def test_differently_named_upstream_is_preserved(tmp_path: Path) -> None:
     """A gone differently named upstream must not match the local branch provenance."""
     box = sandbox(tmp_path)
+    advance(box)
     master = box["master"]
     assert isinstance(master, Path)
     run(master, "git", "config", f"branch.{BRANCH}.remote", "origin")
@@ -313,8 +401,9 @@ def test_differently_named_upstream_is_preserved(tmp_path: Path) -> None:
 
 
 def test_live_remote_branch_is_preserved(tmp_path: Path) -> None:
-    """A still-published branch must not be mistaken for a completed stale branch."""
+    """A still-published unmerged branch must not be mistaken for a completed stale branch."""
     box = sandbox(tmp_path)
+    advance(box)
     master = box["master"]
     assert isinstance(master, Path)
     run(master, "git", "push", "origin", BRANCH)
@@ -348,29 +437,10 @@ def test_advanced_branch_tip_does_not_match_merged_pr_tip(tmp_path: Path) -> Non
     assert run(master, "git", "rev-parse", BRANCH).stdout.strip() != old_tip
 
 
-def test_recreated_branch_without_tracking_provenance_is_preserved(tmp_path: Path) -> None:
-    """Reusing a merged SHA without its original upstream must not inherit cleanup authority."""
-    box = sandbox(tmp_path)
-    master, linked = box["master"], box["linked"]
-    assert isinstance(master, Path) and isinstance(linked, Path)
-    old_tip = box["tip"]
-    assert isinstance(old_tip, str)
-    run(master, "git", "worktree", "remove", str(linked))
-    run(master, "git", "branch", "-D", BRANCH)
-    recreated = "recreated"
-    run(master, "git", "branch", recreated, old_tip)
-    run(master, "git", "worktree", "add", str(linked), recreated)
-
-    result = sync(box, prs=add_pr(box, recreated, old_tip))
-
-    assert result.returncode == 0, result.stderr
-    assert linked.exists()
-    assert branch_exists(master, recreated)
-
-
 def test_failed_github_lookup_preserves_branch_and_warns(tmp_path: Path) -> None:
     """An unavailable PR query must not convert a gone upstream into deletion permission."""
     box = sandbox(tmp_path)
+    advance(box)
     result = sync(box, fail_branches=(BRANCH,))
     linked, master = box["linked"], box["master"]
     assert isinstance(linked, Path) and isinstance(master, Path)
@@ -384,6 +454,7 @@ def test_failed_github_lookup_preserves_branch_and_warns(tmp_path: Path) -> None
 def test_pr_for_another_base_does_not_authorize_cleanup(tmp_path: Path) -> None:
     """A merged PR targeting another branch must not count as a master merge."""
     box = sandbox(tmp_path)
+    advance(box)
     tip = box["tip"]
     assert isinstance(tip, str)
 
